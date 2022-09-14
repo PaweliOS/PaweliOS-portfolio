@@ -1,0 +1,26 @@
+@keyframes moveRight {
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 25%;
+    }
+    100% {
+        margin-left: 0;
+    }
+    
+}
+
+@keyframes moveLeft {
+    0% {
+        margin-left: 25%;
+    }
+    50% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 25%;
+    }
+    
+}
+
