@@ -24,23 +24,22 @@ body {
 }
 
 .header {
-  position: absolute;
-  top: 20px;
-  top: 0;
+  position: relative;
   width: 100%;
   z-index: 5;
 }
 .header__title {
   margin: 20px auto;
   text-align: center;
-  color: white;
-  font-size: 4rem;
+  color: rgb(251, 251, 251);
+  font-size: 6rem;
   font-weight: 100;
   z-index: 11;
 }
 
 .background {
   position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 1200px;
@@ -52,7 +51,6 @@ body {
   position: absolute;
   width: 2000px;
   height: 2000px;
-  font-size: 1rem;
   background-image: linear-gradient(#13046F, black);
   transform-origin: center;
   transform: rotateZ(-45deg) translateX(0%) translateY(-30%);
@@ -60,12 +58,46 @@ body {
 
 .section-one {
   position: relative;
-  width: 100%;
-  height: 1200px;
+  height: 1000px;
+  margin-bottom: 40px;
 }
 .section-one__person-img {
   position: absolute;
   top: 30%;
   transform: translateX(-300px);
   width: 600px;
+}
+.section-one__data {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px 0;
+}
+.section-one__title-two {
+  width: 100%;
+  text-align: center;
+  grid-column: 1/3;
+  color: white;
+  background-color: rgba(0, 128, 0, 0.5);
+}
+.section-one__items {
+  width: 100%;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-image: url("../img/temp_img.jpg");
+}
+.section-one__programming {
+  grid-column: 2/4;
+}
+.section-one__photos {
+  grid-column: 1/3;
+}
+.section-one__hobby {
+  grid-column: 2/4;
+}
+.section-one__about {
+  grid-column: 1/4;
 }/*# sourceMappingURL=main.css.map */
