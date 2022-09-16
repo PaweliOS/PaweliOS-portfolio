@@ -80,6 +80,17 @@ body {
   font-family: "Jura", sans-serif;
 }
 
+.underline {
+  position: relative;
+  width: 350px;
+  height: 1px;
+  background-color: white;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1200px;
@@ -131,21 +142,10 @@ body {
 }
 
 .section-one {
+  opacity: 0;
   position: relative;
-  height: 800px;
-}
-.section-one__data {
-  position: relative;
-  margin: 20px 40px 40px 300px;
+  margin: 20px 40px 10px 300px;
   padding: 10px;
-}
-.section-one__title-two {
-  width: 100%;
-  text-align: center;
-  color: white;
-  margin-bottom: 2rem;
-  font-size: 4rem;
-  font-weight: 100;
 }
 .section-one__items {
   position: relative;
@@ -180,9 +180,9 @@ body {
   -webkit-animation: lightShow 3s linear;
           animation: lightShow 3s linear;
 }
-.section-one__programming--title-three {
+.section-one__programming--title-two {
   font-weight: 100;
-  line-height: 150px;
+  line-height: 140px;
 }
 .section-one__photos {
   margin-left: 25%;
@@ -192,8 +192,7 @@ body {
   -webkit-animation: lightShow 3s linear 0.5s;
           animation: lightShow 3s linear 0.5s;
 }
-.section-one__photos--title-three {
-  font-weight: 100;
+.section-one__photos--title-two {
   font-weight: 100;
   line-height: 140px;
 }
@@ -204,8 +203,7 @@ body {
   -webkit-animation: lightShow 3s linear 1s;
           animation: lightShow 3s linear 1s;
 }
-.section-one__hobby--title-three {
-  font-weight: 100;
+.section-one__hobby--title-two {
   font-weight: 100;
   line-height: 140px;
 }
@@ -217,27 +215,59 @@ body {
   -webkit-animation: lightShow 3s linear 1.5s;
           animation: lightShow 3s linear 1.5s;
 }
-.section-one__about--title-three {
-  font-weight: 100;
+.section-one__about--title-two {
   font-weight: 100;
   line-height: 140px;
 }
 
+.github-address {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: font-weight 0.3s;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.github-address:hover {
+  font-weight: bold;
+}
+
 .section-two {
-  position: relative;
+  position: absolute;
   height: 800px;
+  top: 20px;
+  right: 40px;
+  bottom: 40px;
+  left: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .section-two__data {
-  position: relative;
-  margin: 20px 40px 40px 300px;
-  padding: 10px;
-  background-color: goldenrod;
+  color: white;
+  padding: 40px;
+}
+.section-two__title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+.section-two__list {
+  margin-top: 40px;
+  font-size: 2.5rem;
+}
+.section-two__item {
+  margin-bottom: 20px;
 }
 
 .footer {
   position: relative;
+  margin-top: 30px;
   color: white;
   font-size: 2rem;
   text-align: center;
-  bottom: 10px;
 }/*# sourceMappingURL=main.css.map */
