@@ -1,5 +1,11 @@
 @use './animations' as *;
 
+@mixin dataContent {
+        position: relative;
+        margin: 20px 40px 40px 300px;
+        padding: 10px;
+}
+
 $animationTime: 0s;
 
 *, 
@@ -51,9 +57,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 1200px;
-    height: 95vh;
-    
-    // margin: 0 auto;
+    height: 100vh;
     overflow: hidden;
     z-index: -1;
 
@@ -65,7 +69,17 @@ body {
         transform-origin: center;
         transform: rotateZ(-45deg) translateX(0%) translateY(-30%);
     }
+}
 
+.main {
+    position: relative;
+
+    &__person-img {
+        position: absolute;
+        bottom: 100px;
+        transform: translateX(-300px);
+        width: 600px;
+    }
 }
 
 
@@ -73,38 +87,15 @@ body {
 .section-one {
     position: relative;
     height: 800px;
-    margin-bottom: 40px;
     
-    
-    &__person-img {
-        position: absolute;
-        bottom: 5%;
-        transform: translateX(-300px);
-        width: 600px;
-        
-    }
-    // &__person-img-two {
-    //     position: absolute;
-    //     top: 30%;
-    //     transform: translateX(100px);
-    //     width: 300px;
-    // }
-
     &__data {
-        position: relative;
-        margin: 20px 40px 40px 300px;
-        padding: 10px;
-        // border-left: 1px solid white;
-        // transform:perspective(300px) rotateX(5deg);
-        // background-color: rgba(255, 255, 255, .5);
+    @include dataContent();
     }
     
     &__title-two {
-        
         width: 100%;
         text-align: center;
         color: white;
-        // background-color: rgba(0, 128, 0, .5);
         margin-bottom: 2rem;
         font-size: 4rem;
         font-weight: 100;
@@ -124,8 +115,10 @@ body {
         border: 1px solid white;
         border-radius: 16px;
         background-image: url('../img/temp_img.jpg');
-        transition: transform .8s;
+        transition: transform .8s, box-shadow .8s;
+        // transform-origin: 0 0;
         font-size: 3rem;
+        cursor: pointer;
 
         &--bg {
             position: absolute;
@@ -141,12 +134,19 @@ body {
 
     &__items:hover {
         transform: scale(1.1);
+        box-shadow: 0 5px 20px white;
+        
+        // transform: rotateY(30deg) rotateZ(-2deg) ;
+       
     }
 
     &__programming {
         z-index: 1;
         color: rgb(255, 249, 249);
-        animation: moveRight $animationTime infinite;
+        // animation: moveRight $animationTime infinite;
+        opacity: 1;
+        animation: lightShow 3s linear;
+        
         &--title-three {
          
          font-weight: 100;
@@ -157,8 +157,10 @@ body {
     &__photos {
         margin-left: 25%;
         color: rgb(255, 249, 249);
-        animation: moveLeft $animationTime infinite;
+        // animation: moveLeft $animationTime infinite;
         z-index: 1;
+        opacity: 1;
+        animation: lightShow 3s linear .5s;
         &--title-three {
          font-weight: 100;
          font-weight: 100;
@@ -168,7 +170,9 @@ body {
     &__hobby {
         color: rgb(255, 249, 249);
         z-index: 1;
-        animation: moveRight $animationTime 5s infinite;
+        // animation: moveRight $animationTime 5s infinite;
+        opacity: 1;
+        animation: lightShow 3s linear 1s;
         &--title-three {
          font-weight: 100;
          font-weight: 100;
@@ -181,24 +185,37 @@ body {
 
         margin-left: 25%;
         color: rgb(255, 249, 249);
-        animation: moveLeft $animationTime 5s infinite;
+        // animation: moveLeft $animationTime 5s infinite;
         z-index: 1;
+        opacity: 1;
+        animation: lightShow 3s linear 1.5s;
         &--title-three {
          font-weight: 100;
          font-weight: 100;
          line-height: 140px;
         }
     }
-
-
-
-    
 }
 
+
+.section-two {
+    position: relative;
+    height: 800px;
+
+    &__data {
+        @include dataContent();
+        background-color: goldenrod;
+    }
+
+}
+
+
+
+
 .footer {
-    // position: relative;
+    position: relative;
     color: white;
     font-size: 2rem;
     text-align: center;
-    bottom: 0;
+    bottom: 10px;
 }

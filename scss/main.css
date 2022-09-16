@@ -42,6 +42,26 @@
     margin-left: 25%;
   }
 }
+@-webkit-keyframes lightShow {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 100%;
+    transform: rotateX(0);
+  }
+}
+@keyframes lightShow {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 100%;
+    transform: rotateX(0);
+  }
+}
 *,
 *::after,
 *::before {
@@ -87,7 +107,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 1200px;
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   z-index: -1;
 }
@@ -100,16 +120,19 @@ body {
   transform: rotateZ(-45deg) translateX(0%) translateY(-30%);
 }
 
+.main {
+  position: relative;
+}
+.main__person-img {
+  position: absolute;
+  bottom: 100px;
+  transform: translateX(-300px);
+  width: 600px;
+}
+
 .section-one {
   position: relative;
   height: 800px;
-  margin-bottom: 40px;
-}
-.section-one__person-img {
-  position: absolute;
-  bottom: 5%;
-  transform: translateX(-300px);
-  width: 600px;
 }
 .section-one__data {
   position: relative;
@@ -134,8 +157,9 @@ body {
   border: 1px solid white;
   border-radius: 16px;
   background-image: url("../img/temp_img.jpg");
-  transition: transform 0.8s;
+  transition: transform 0.8s, box-shadow 0.8s;
   font-size: 3rem;
+  cursor: pointer;
 }
 .section-one__items--bg {
   position: absolute;
@@ -147,12 +171,14 @@ body {
 }
 .section-one__items:hover {
   transform: scale(1.1);
+  box-shadow: 0 5px 20px white;
 }
 .section-one__programming {
   z-index: 1;
   color: rgb(255, 249, 249);
-  -webkit-animation: moveRight 0s infinite;
-          animation: moveRight 0s infinite;
+  opacity: 1;
+  -webkit-animation: lightShow 3s linear;
+          animation: lightShow 3s linear;
 }
 .section-one__programming--title-three {
   font-weight: 100;
@@ -161,9 +187,10 @@ body {
 .section-one__photos {
   margin-left: 25%;
   color: rgb(255, 249, 249);
-  -webkit-animation: moveLeft 0s infinite;
-          animation: moveLeft 0s infinite;
   z-index: 1;
+  opacity: 1;
+  -webkit-animation: lightShow 3s linear 0.5s;
+          animation: lightShow 3s linear 0.5s;
 }
 .section-one__photos--title-three {
   font-weight: 100;
@@ -173,8 +200,9 @@ body {
 .section-one__hobby {
   color: rgb(255, 249, 249);
   z-index: 1;
-  -webkit-animation: moveRight 0s 5s infinite;
-          animation: moveRight 0s 5s infinite;
+  opacity: 1;
+  -webkit-animation: lightShow 3s linear 1s;
+          animation: lightShow 3s linear 1s;
 }
 .section-one__hobby--title-three {
   font-weight: 100;
@@ -184,9 +212,10 @@ body {
 .section-one__about {
   margin-left: 25%;
   color: rgb(255, 249, 249);
-  -webkit-animation: moveLeft 0s 5s infinite;
-          animation: moveLeft 0s 5s infinite;
   z-index: 1;
+  opacity: 1;
+  -webkit-animation: lightShow 3s linear 1.5s;
+          animation: lightShow 3s linear 1.5s;
 }
 .section-one__about--title-three {
   font-weight: 100;
@@ -194,9 +223,21 @@ body {
   line-height: 140px;
 }
 
+.section-two {
+  position: relative;
+  height: 800px;
+}
+.section-two__data {
+  position: relative;
+  margin: 20px 40px 40px 300px;
+  padding: 10px;
+  background-color: goldenrod;
+}
+
 .footer {
+  position: relative;
   color: white;
   font-size: 2rem;
   text-align: center;
-  bottom: 0;
+  bottom: 10px;
 }/*# sourceMappingURL=main.css.map */
