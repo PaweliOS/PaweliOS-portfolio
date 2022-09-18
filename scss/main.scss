@@ -255,11 +255,34 @@ transform: translateX(-50%);
 .next-btn {
     // display: inline-block;
     position: absolute;
-    right: 0;
+    right: 10px;
     top: calc(100% - 100px);
     color: white;
     font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
 }
+
+.next-btn:hover {
+    color: yellow;
+}
+
+.next-btn:hover:before {
+    background-color: yellow;
+}
+.next-btn::before {
+    position: absolute;
+    // display: block;
+    content: '';
+    width: 10px;
+    height: 1px;
+    bottom: -6px;
+    left: 0px;
+    background-color: rgb(237, 16, 16);
+    animation: next 5s infinite linear;
+   
+}
+
 
 .page-number {
     position: absolute;

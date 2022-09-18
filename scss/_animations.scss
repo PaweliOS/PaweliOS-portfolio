@@ -35,3 +35,17 @@
     }
 }
 
+@keyframes next {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 37px;
+       
+    }
+    100% {
+        left: 0;
+    }
+}
+
