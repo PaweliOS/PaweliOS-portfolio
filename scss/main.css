@@ -237,7 +237,37 @@ body {
   font-weight: bold;
 }
 
+.project-details {
+  color: lightgray;
+  font-size: 2rem;
+}
+
+.break-down {
+  margin-bottom: 3rem;
+}
+
+.break-up {
+  margin-top: 3rem;
+}
+
+.next-btn {
+  position: absolute;
+  right: 0;
+  top: calc(100% - 100px);
+  color: white;
+  font-size: 2rem;
+}
+
+.page-number {
+  position: absolute;
+  right: 50%;
+  top: calc(100% - 80px);
+  color: white;
+  font-size: 2rem;
+}
+
 .section-two {
+  display: none;
   position: absolute;
   height: 800px;
   top: 20px;
@@ -257,10 +287,37 @@ body {
   letter-spacing: 2px;
 }
 .section-two__list {
-  margin-top: 40px;
+  margin-top: 120px;
   font-size: 2.5rem;
 }
 .section-two__item {
+  margin-bottom: 60px;
+}
+
+.section-three {
+  position: absolute;
+  height: 800px;
+  top: 20px;
+  right: 40px;
+  bottom: 40px;
+  left: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.section-three__data {
+  color: white;
+  padding: 40px;
+}
+.section-three__title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+.section-three__list {
+  margin-top: 40px;
+  font-size: 2.5rem;
+}
+.section-three__item {
   margin-bottom: 20px;
 }
 

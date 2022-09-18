@@ -241,38 +241,89 @@ transform: translateX(-50%);
     font-weight: bold;
 }
 
+.project-details {
+    color: lightgray;
+    font-size: 2rem;
+}
+
+.break-down {
+    margin-bottom: 3rem;
+}
+.break-up {
+    margin-top: 3rem;
+}
+.next-btn {
+    // display: inline-block;
+    position: absolute;
+    right: 0;
+    top: calc(100% - 100px);
+    color: white;
+    font-size: 2rem;
+}
+
+.page-number {
+    position: absolute;
+    right: calc(50%);
+    top: calc(100% - 80px);
+    color: white;
+    font-size: 2rem;
+}
+
+
 .section-two {
+    display: none;
     position: absolute;
     height: 800px;
     top: 20px;
         right: 40px;
         bottom: 40px;
         left: 300px;
-    // padding: 10px;
-        // @include dataContent();
-       
         background-color: rgba(0, 0, 0, 0.2);
-//margin: 20px 40px 40px 300px;
 
     &__data {
         color: white;
         padding: 40px;
-
     }
-
     &__title {
         text-align: center;
         font-weight: 100;
         font-size: 3rem;
         letter-spacing: 2px ;
-        
     }
+    &__list {
+        margin-top: 120px;
+        font-size: 2.5rem;
+    }
+    &__item {
+        margin-bottom: 60px;
+    }
+}
 
 
+
+.section-three {
+    // display: none;
+    position: absolute;
+    height: 800px;
+    top: 20px;
+        right: 40px;
+        bottom: 40px;
+        left: 300px;
+        background-color: rgba(0, 0, 0, 0.2);
+
+    &__data {
+        color: white;
+        padding: 40px;
+    }
+    &__title {
+        text-align: center;
+        font-weight: 100;
+        font-size: 3rem;
+        letter-spacing: 2px ;
+    }
     &__list {
         margin-top: 40px;
         font-size: 2.5rem;
-        // list-style: none;
     }
     &__item {
         margin-bottom: 20px;
