@@ -272,25 +272,31 @@ body {
   margin-top: 3rem;
 }
 
-.next-btn {
+.move-btns {
   position: absolute;
-  right: 10px;
   top: calc(100% - 100px);
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: transparent;
   cursor: pointer;
+  letter-spacing: 1px;
+}
+.move-btns__next {
+  right: 10px;
+}
+.move-btns__back {
+  left: 10px;
 }
 
-.next-btn:hover {
+.move-btns:hover {
   color: yellow;
 }
 
-.next-btn:hover:before {
+.move-btns:hover:before {
   background-color: yellow;
 }
 
-.next-btn::before {
+.move-btns::before {
   position: absolute;
   content: "";
   width: 10px;
@@ -339,6 +345,7 @@ body {
 }
 
 .section-three {
+  display: none;
   position: absolute;
   height: 800px;
   top: 20px;
@@ -360,9 +367,48 @@ body {
 .section-three__list {
   margin-top: 40px;
   font-size: 2.5rem;
+  counter-reset: step-counter 3;
 }
 .section-three__item {
   margin-bottom: 20px;
+}
+
+.section-four {
+  position: absolute;
+  height: 800px;
+  top: 20px;
+  right: 40px;
+  bottom: 40px;
+  left: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.section-four__data {
+  color: white;
+  padding: 40px;
+}
+.section-four__title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+.section-four__list {
+  margin-top: 40px;
+  font-size: 2.5rem;
+}
+.section-four__item {
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.section-four__item::before {
+  width: 1.75em;
+  height: 1.75em;
+  position: absolute;
+  left: -25px;
+  margin-right: 12px;
+  content: "4.";
+  counter-increment: li;
 }
 
 .footer {
