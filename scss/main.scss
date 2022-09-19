@@ -1,12 +1,26 @@
 @use './animations' as *;
 
 @mixin dataContent {
-        // top: 0;
-            // right: 10px;
-            // bottom: 40px;
-            // left: 300px;
             margin: 20px 40px 10px 300px;
         padding: 10px;
+}
+
+@mixin sectionHeight($individualHeight) {
+    height: $individualHeight;
+}
+
+@mixin forUnderline($individualWidth) {
+    width: $individualWidth;
+    position: relative;
+    // display: inline-block;
+    // width: 350px;
+    height: 1px;
+    background-color: white;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    margin-top: 4px;
 }
 
 // @mixin titleTwo {
@@ -19,6 +33,7 @@
 // }
 
 $animationTime: 0s;
+// $sectionHeight: 740px;
 
 *, 
 *::after, 
@@ -39,16 +54,7 @@ body {
 }
 
 .underline {
-    position: relative;
-    // display: inline-block;
-    width: 350px;
-    height: 1px;
-    background-color: white;
-    align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    margin-top: 4px;
+    @include forUnderline(120px);
 }
 
 .wrapper {
@@ -250,7 +256,7 @@ transform: translateX(-50%);
 }
 .move-btns {
     position: absolute;
-    top: calc(100% - 100px);
+    top: calc(100% - 40px);
     color: white;
     font-size: 1.8rem;
     background-color: transparent;
@@ -289,7 +295,7 @@ transform: translateX(-50%);
 .page-number {
     position: absolute;
     right: calc(50%);
-    top: calc(100% - 80px);
+    top: calc(100% - 30px);
     color: white;
     font-size: 2rem;
 }
@@ -298,13 +304,14 @@ transform: translateX(-50%);
 .section-two {
     display: none;
     position: absolute;
-    height: 800px;
+    @include sectionHeight(740px);
+    // height: $sectionHeight;
     top: 20px;
-        right: 40px;
-        bottom: 40px;
-        left: 300px;
-        background-color: rgba(0, 0, 0, 0.2);
-
+    right: 40px;
+    bottom: 40px;
+    left: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgb(14, 34, 164);
     &__data {
         color: white;
         padding: 40px;
@@ -329,13 +336,13 @@ transform: translateX(-50%);
 .section-three {
     display: none;
     position: absolute;
-    height: 800px;
+    @include sectionHeight(740px);
     top: 20px;
-        right: 40px;
-        bottom: 40px;
-        left: 300px;
-        background-color: rgba(0, 0, 0, 0.2);
-
+    right: 40px;
+    bottom: 40px;
+    left: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgb(14, 34, 164);
     &__data {
         color: white;
         padding: 40px;
@@ -358,18 +365,64 @@ transform: translateX(-50%);
 }
 
 .section-four {
-    // display: none;
-    position: absolute;
-    height: 800px;
+    display: none;
+    // position: absolute;
+    @include sectionHeight(740px);
     top: 20px;
-        right: 40px;
-        bottom: 40px;
-        left: 300px;
-        background-color: rgba(0, 0, 0, 0.2);
-
+    right: 40px;
+    bottom: 40px;
+    left: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgb(14, 34, 164);
+    
     &__data {
         color: white;
         padding: 40px;
+        // border: 1px solid red;
+    }
+    &__title {
+        text-align: center;
+        font-weight: 100;
+        font-size: 3rem;
+        letter-spacing: 2px ;
+    }
+    &__list {
+        margin-top: 40px;
+        font-size: 2.5rem;
+        // counter-reset: li;
+    }
+    &__item {
+        position: relative;
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+
+    &__item::before {
+        width: 1.75em;
+    height: 1.75em;
+    position: absolute; left: -25px;        
+    margin-right: 12px;       
+    content: '4.';
+    counter-increment: li;
+    }
+}
+
+
+.section-gallery {
+    // display: none;
+    position: absolute;
+    @include sectionHeight(740px);
+    top: 20px;
+    right: 40px;
+    bottom: 40px;
+    left: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgb(14, 34, 164);
+    
+    &__data {
+        color: white;
+        padding: 40px;
+        // border: 1px solid red;
     }
     &__title {
         text-align: center;

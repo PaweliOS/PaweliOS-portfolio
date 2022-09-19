@@ -67,7 +67,7 @@
     left: 0;
   }
   50% {
-    left: 37px;
+    left: 80%;
   }
   100% {
     left: 0;
@@ -78,7 +78,7 @@
     left: 0;
   }
   50% {
-    left: 37px;
+    left: 80%;
   }
   100% {
     left: 0;
@@ -103,8 +103,8 @@ body {
 }
 
 .underline {
+  width: 120px;
   position: relative;
-  width: 350px;
   height: 1px;
   background-color: white;
   align-items: center;
@@ -274,7 +274,7 @@ body {
 
 .move-btns {
   position: absolute;
-  top: calc(100% - 100px);
+  top: calc(100% - 40px);
   color: white;
   font-size: 1.8rem;
   background-color: transparent;
@@ -311,7 +311,7 @@ body {
 .page-number {
   position: absolute;
   right: 50%;
-  top: calc(100% - 80px);
+  top: calc(100% - 30px);
   color: white;
   font-size: 2rem;
 }
@@ -319,12 +319,13 @@ body {
 .section-two {
   display: none;
   position: absolute;
-  height: 800px;
+  height: 740px;
   top: 20px;
   right: 40px;
   bottom: 40px;
   left: 300px;
   background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px rgb(14, 34, 164);
 }
 .section-two__data {
   color: white;
@@ -347,12 +348,13 @@ body {
 .section-three {
   display: none;
   position: absolute;
-  height: 800px;
+  height: 740px;
   top: 20px;
   right: 40px;
   bottom: 40px;
   left: 300px;
   background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px rgb(14, 34, 164);
 }
 .section-three__data {
   color: white;
@@ -374,13 +376,14 @@ body {
 }
 
 .section-four {
-  position: absolute;
-  height: 800px;
+  display: none;
+  height: 740px;
   top: 20px;
   right: 40px;
   bottom: 40px;
   left: 300px;
   background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px rgb(14, 34, 164);
 }
 .section-four__data {
   color: white;
@@ -402,6 +405,45 @@ body {
   margin-bottom: 20px;
 }
 .section-four__item::before {
+  width: 1.75em;
+  height: 1.75em;
+  position: absolute;
+  left: -25px;
+  margin-right: 12px;
+  content: "4.";
+  counter-increment: li;
+}
+
+.section-gallery {
+  position: absolute;
+  height: 740px;
+  top: 20px;
+  right: 40px;
+  bottom: 40px;
+  left: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px rgb(14, 34, 164);
+}
+.section-gallery__data {
+  color: white;
+  padding: 40px;
+}
+.section-gallery__title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+.section-gallery__list {
+  margin-top: 40px;
+  font-size: 2.5rem;
+}
+.section-gallery__item {
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.section-gallery__item::before {
   width: 1.75em;
   height: 1.75em;
   position: absolute;
