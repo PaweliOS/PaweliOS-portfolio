@@ -1,4 +1,4 @@
-
+@use './pageTransitions' as *;
 
 
 @mixin sectionHeight($individualHeight) {
@@ -178,6 +178,12 @@ body {
 
 }
 
+.section-one-details {
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+
+}
 
 
 .footer {
