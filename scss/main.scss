@@ -1,10 +1,20 @@
 @use './pageTransitions' as *;
-
+@use './animations' as *;
 
 @mixin sectionHeight($individualHeight) {
     height: $individualHeight;
 }
 
+// @mixin forUnderline($individualWidth) {
+//     width: $individualWidth;
+//     position: relative;
+//     height: 1px;
+//     background-color: white;
+//     align-items: center;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     margin-top: 4px;
+// }
 *, 
 *::after, 
 *::before {
@@ -25,6 +35,20 @@ body {
     
 }
 
+.underline {
+    position: relative;
+    height: 1px;
+    background-color: white;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4px;
+
+    &__section-one-details--page-one-title {
+        // @include forUnderline(350px);
+        width: 350px;
+    }
+}
 .wrapper {
     width: 100%;
     max-width: 1200px;
@@ -178,13 +202,113 @@ body {
 
 }
 
+.github-address {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: font-weight .3s;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.github-address:hover {
+    font-weight: bold;
+}
+
+.project-details {
+    color: lightgray;
+    font-size: 2rem;
+}
+
+.break-down {
+    margin-bottom: 3rem;
+}
+
+.break-up {
+    margin-top: 3rem;
+}
+
+.move-btns {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 4rem;
+
+    &__btns {
+        position: relative;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        font-family: 'Jura', sans-serif;
+        cursor: pointer;
+    }
+
+    &__back::before,
+    &__next::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 1px;
+        bottom: -6px;
+        left: 0px;
+        background-color: rgb(237, 16, 16);
+        animation: next 5s infinite linear;
+
+    }
+
+    &__btns:hover {
+        color: yellow;
+    }
+
+    .move-btns__back:hover:before,
+    .move-btns__next:hover:before {
+        background-color: yellow;
+    }
+}
+
+.page-number {
+    position: absolute;
+    right: calc(50%);
+    top: calc(100% - 30px);
+    color: white;
+    font-size: 2rem;
+}
 .section-one-details {
-    background-color: grey;
+width: 100%;
+    height: 100%;
+    padding: 2rem 3rem 0 4rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgb(14, 34, 164);
+}
+
+.section-one-details-page-one {
+    position: relative;
     width: 100%;
     height: 100%;
 
+    &__title {
+        text-align: center;
+        font-weight: 100;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    &__list {
+        margin-top: 120px;
+        font-size: 2.5rem;
+    }
+                                                                                                                                                    
+    &__item {
+        margin-bottom: 60px;
+    }
 }
-
 
 .footer {
     position: absolute;
