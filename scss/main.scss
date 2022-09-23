@@ -232,45 +232,7 @@ body {
     margin-top: 3rem;
 }
 
-.move-btns {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    bottom: 4rem;
 
-    &__btns {
-        position: relative;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        font-family: 'Jura', sans-serif;
-        cursor: pointer;
-    }
-
-    &__back::before,
-    &__next::before {
-        position: absolute;
-        content: '';
-        width: 10px;
-        height: 1px;
-        bottom: -6px;
-        left: 0px;
-        background-color: rgb(237, 16, 16);
-        animation: next 5s infinite linear;
-
-    }
-
-    &__btns:hover {
-        color: yellow;
-    }
-
-    .move-btns__back:hover:before,
-    .move-btns__next:hover:before {
-        background-color: yellow;
-    }
-}
 
 .page-number {
     position: absolute;
@@ -323,6 +285,47 @@ width: 100%;
     
 }
 
+.move-btns {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    bottom: 6rem;
+
+    &__btns {
+        position: relative;
+        // display: flex;
+        // margin-left: 40px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        font-family: 'Jura', sans-serif;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &__back::before,
+    &__next::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 1px;
+        bottom: -6px;
+        left: 0px;
+        background-color: rgb(237, 16, 16);
+        animation: next 5s infinite linear;
+
+    }
+
+    &__btns:hover {
+        color: yellow;
+    }
+
+    .move-btns__back:hover:before,
+    .move-btns__next:hover:before {
+        background-color: yellow;
+    }
+}
 
 .footer {
     position: absolute;

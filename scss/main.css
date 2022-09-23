@@ -298,41 +298,6 @@ body {
   margin-top: 3rem;
 }
 
-.move-btns {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  bottom: 4rem;
-}
-.move-btns__btns {
-  position: relative;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  font-family: "Jura", sans-serif;
-  cursor: pointer;
-}
-.move-btns__back::before, .move-btns__next::before {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 1px;
-  bottom: -6px;
-  left: 0px;
-  background-color: rgb(237, 16, 16);
-  -webkit-animation: next 5s infinite linear;
-          animation: next 5s infinite linear;
-}
-.move-btns__btns:hover {
-  color: yellow;
-}
-.move-btns .move-btns__back:hover:before,
-.move-btns .move-btns__next:hover:before {
-  background-color: yellow;
-}
-
 .page-number {
   position: absolute;
   right: 50%;
@@ -378,6 +343,41 @@ body {
 }
 .section-one-details-page-two p {
   font-size: 1.9rem;
+}
+
+.move-btns {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  bottom: 6rem;
+}
+.move-btns__btns {
+  position: relative;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-family: "Jura", sans-serif;
+  cursor: pointer;
+  z-index: 1;
+}
+.move-btns__back::before, .move-btns__next::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  bottom: -6px;
+  left: 0px;
+  background-color: rgb(237, 16, 16);
+  -webkit-animation: next 5s infinite linear;
+          animation: next 5s infinite linear;
+}
+.move-btns__btns:hover {
+  color: yellow;
+}
+.move-btns .move-btns__back:hover:before,
+.move-btns .move-btns__next:hover:before {
+  background-color: yellow;
 }
 
 .footer {
