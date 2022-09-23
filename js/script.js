@@ -16,17 +16,21 @@ const pageTwo = document.querySelector('.section-one-details-page-two')
 const pageThree = document.querySelector('.section-one-details-page-three')
 
 const sectionTwo = document.querySelector('.section-two')
+const sectionTwoDetails = document.querySelector('.section-two-details')
+const pageOneSectionTwo = document.querySelector('.section-two-details-page-one')
 const sectionThree = document.querySelector('.section-three')
 const sectionFour = document.querySelector('.section-four')
 const sectionGallery = document.querySelector('.section-gallery')
 
-let sectionNumber = 1
-let pageNumber = 0
 
 
+let sectionNumber
+let pageNumber
+
+//section One
 const goToSectionOneDetails = () => {
     sectionNumber = 1
-    pageNumber +=1
+    pageNumber = 0
     programmingBtn.classList.add('inactive')
     sectionTwo.classList.add('inactive')
     sectionThree.classList.add('inactive')
@@ -34,10 +38,11 @@ const goToSectionOneDetails = () => {
     sectionOneDetails.classList.remove('inactive')
     pageOne.classList.remove('inactive')
 
-    if (pageNumber == 1) {
+    if (pageNumber == 0) {
         backBtn.classList.add('inactive')
     }
-
+        
+        pageNumber +=1
     console.log('Next -> '+sectionNumber+', page: '+pageNumber)
 }
 
@@ -68,24 +73,35 @@ const goBack = () => {
 
     if ((sectionNumber == 1) && (pageNumber == 2)) {
         console.log('SPR: Next -> '+sectionNumber+', page: '+pageNumber)
+        pageTwo.classList.add('inactive')
+        pageOne.classList.remove('inactive')
+        // backBtn.classList.add('inactive')
+        // sectionNumber = 1
+        pageNumber-=1
+        // console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
+    }
+
+    if ((sectionNumber == 1) && (pageNumber == 3)) {
+        console.log('SPR: Next -> '+sectionNumber+', page: '+pageNumber)
         pageThree.classList.add('inactive')
         pageTwo.classList.remove('inactive')
         // backBtn.classList.add('inactive')
-        // sectionNumber = 1
-        // pageNumber-=1
+        
+        pageNumber-=1
         // console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
     }
 
 
 
-    sectionNumber = 1
-    pageNumber-=1
+
+    // pageNumber-=1
 
 
 }
 const goMain = () => {
         pageOne.classList.add('inactive')
         pageTwo.classList.add('inactive')
+        pageThree.classList.add('inactive')
         sectionOneDetails.classList.add('inactive')
         programmingBtn.classList.remove('inactive')
         sectionTwo.classList.remove('inactive')
@@ -110,16 +126,30 @@ const goNext = () => {
     if ((sectionNumber == 1) && (pageNumber == 2)) {
         pageTwo.classList.add('inactive')
         pageThree.classList.remove('inactive') 
-        // zabezpieczam dalsze zwiększanie numeru pageNumber:
-        pageNumber -=1
+        // pageNumber -=1
     }
     sectionNumber = 1
     pageNumber += 1
 
 }
-const goToSectionThree = () => {
-    sectionOne.classList.add('inactive-section-one')
-    sectionThree.classList.remove('inactive')
+
+
+
+// section Two
+
+const goToSectionTwoDetails = () => {
+    sectionNumber = 2
+    pageNumber = 0
+    photosBtn.classList.add('inactive')
+    sectionOne.classList.add('inactive')
+    sectionThree.classList.add('inactive')
+    sectionFour.classList.add('inactive')
+    sectionTwoDetails.classList.remove('inactive')
+    pageOneSectionTwo.classList.remove('inactive')
+
+    if (pageNumber == 0) {
+        backBtn.classList.add('inactive')
+    }
 }
 
 programmingBtn.addEventListener('click', goToSectionOneDetails);
@@ -127,6 +157,6 @@ backBtn.addEventListener('click', goBack)
 mainBtn.addEventListener('click', goMain)
 nextBtn.addEventListener('click', goNext)
 // programmingBtn.addEventListener('click', goToSectionOneDetails);
-// photosBtn.addEventListener('click', goToSectionThree);
+photosBtn.addEventListener('click', goToSectionTwoDetails)
 // hobbyBtn.addEventListener('click', goToSectionFour);
 // aboutBtn.addEventListener('click', goToSectionAbout);
