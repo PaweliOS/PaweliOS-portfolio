@@ -4,10 +4,11 @@ const photosBtn = document.querySelector('.section-two__photos-btn')
 const hobbyBtn = document.querySelector('.section-three__hobby-btn')
 const aboutBtn = document.querySelector('.section-four__about-btn')
 
-const sectionsBtns = document.querySelectorAll('.sections-btns')
+const mainsBtns = document.querySelectorAll('.move-btns__main')
 const backBtn = document.querySelector('.move-btns__back')
 const mainBtn = document.querySelector('.move-btns__main')
 const nextBtn = document.querySelector('.move-btns__next')
+
 
 const sectionOne = document.querySelector('.section-one')
 const sectionOneDetails = document.querySelector('.section-one-details')
@@ -99,6 +100,8 @@ const goBack = () => {
 
 }
 const goMain = () => {
+
+    if (sectionNumber == 1) {
         pageOne.classList.add('inactive')
         pageTwo.classList.add('inactive')
         pageThree.classList.add('inactive')
@@ -109,7 +112,21 @@ const goMain = () => {
         sectionFour.classList.remove('inactive')
         sectionNumber = 1
         pageNumber = 0
-        console.log('Next -> '+sectionNumber+', page: '+pageNumber)
+        console.log('Next -> ' + sectionNumber + ', page: ' + pageNumber)
+    }
+
+    if (sectionNumber == 2) {
+        photosBtn.classList.remove('inactive')
+        sectionOne.classList.remove('inactive')
+        sectionThree.classList.remove('inactive')
+        sectionFour.classList.remove('inactive')
+        sectionTwoDetails.classList.add('inactive')
+        pageOneSectionTwo.classList.add('inactive')
+    
+        sectionNumber = 2
+        pageNumber = 0
+    }
+
 }
 
 const goNext = () => {
@@ -126,6 +143,7 @@ const goNext = () => {
     if ((sectionNumber == 1) && (pageNumber == 2)) {
         pageTwo.classList.add('inactive')
         pageThree.classList.remove('inactive') 
+        nextBtn.classList.add('inactive')
         // pageNumber -=1
     }
     sectionNumber = 1
@@ -152,11 +170,20 @@ const goToSectionTwoDetails = () => {
     }
 }
 
+const setListenerForMain = () => {
+    mainsBtns.forEach((btn) => {
+        btn.addEventListener('click', goMain)
+    })
+    
+}
+
 programmingBtn.addEventListener('click', goToSectionOneDetails);
 backBtn.addEventListener('click', goBack)
-mainBtn.addEventListener('click', goMain)
+// mainBtn.addEventListener('click', goMain)
 nextBtn.addEventListener('click', goNext)
 // programmingBtn.addEventListener('click', goToSectionOneDetails);
+// ustawiam listenera na wszytskie guziki main:
+document.addEventListener('DOMContentLoaded', setListenerForMain)
 photosBtn.addEventListener('click', goToSectionTwoDetails)
 // hobbyBtn.addEventListener('click', goToSectionFour);
 // aboutBtn.addEventListener('click', goToSectionAbout);
