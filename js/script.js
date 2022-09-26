@@ -20,6 +20,8 @@ const sectionTwo = document.querySelector('.section-two')
 const sectionTwoDetails = document.querySelector('.section-two-details')
 const pageOneSectionTwo = document.querySelector('.section-two-details-page-one')
 const sectionThree = document.querySelector('.section-three')
+const sectionThreeDetails = document.querySelector('.section-three-details')
+const pageOneSectionThree = document.querySelector('.section-three-details-page-one')
 const sectionFour = document.querySelector('.section-four')
 const sectionGallery = document.querySelector('.section-gallery')
 
@@ -38,9 +40,13 @@ const goToSectionOneDetails = () => {
     sectionFour.classList.add('inactive')
     sectionOneDetails.classList.remove('inactive')
     pageOne.classList.remove('inactive')
-
+    
     if (pageNumber == 0) {
         backBtn.classList.add('inactive')
+    }
+
+    if (nextBtn.classList.contains('inactive')) {
+        nextBtn.classList.remove('inactive')
     }
         
         pageNumber +=1
@@ -170,6 +176,23 @@ const goToSectionTwoDetails = () => {
     }
 }
 
+const goToSectionThree = () => {
+    sectionNumber = 3
+    pageNumber = 0
+    // photosBtn.classList.add('inactive')
+    sectionOne.classList.add('inactive')
+    sectionTwo.classList.add('inactive')
+    sectionThree.classList.add('inactive')
+    sectionFour.classList.add('inactive')
+    sectionThreeDetails.classList.remove('inactive')
+    pageOneSectionThree.classList.remove('inactive')
+
+    if (pageNumber == 0) {
+        backBtn.classList.add('inactive')
+    }  
+}
+
+
 const setListenerForMain = () => {
     mainsBtns.forEach((btn) => {
         btn.addEventListener('click', goMain)
@@ -185,5 +208,5 @@ nextBtn.addEventListener('click', goNext)
 // ustawiam listenera na wszytskie guziki main:
 document.addEventListener('DOMContentLoaded', setListenerForMain)
 photosBtn.addEventListener('click', goToSectionTwoDetails)
-// hobbyBtn.addEventListener('click', goToSectionFour);
+hobbyBtn.addEventListener('click', goToSectionThree);
 // aboutBtn.addEventListener('click', goToSectionAbout);
