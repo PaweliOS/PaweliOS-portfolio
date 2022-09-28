@@ -22,6 +22,8 @@ const pageOneSectionTwo = document.querySelector('.section-two-details-page-one'
 const sectionThree = document.querySelector('.section-three')
 const sectionThreeDetails = document.querySelector('.section-three-details')
 const pageOneSectionThree = document.querySelector('.section-three-details-page-one')
+const pageTwoSectionThree = document.querySelector('.section-three-details-page-two')
+
 const sectionFour = document.querySelector('.section-four')
 const sectionGallery = document.querySelector('.section-gallery')
 
@@ -55,6 +57,57 @@ const goToSectionOneDetails = () => {
         pageNumber +=1
     console.log('Next -> '+sectionNumber+', page: '+pageNumber)
 }
+
+
+
+
+// section Two
+
+const goToSectionTwoDetails = () => {
+    sectionNumber = 2
+    pageNumber = 0
+    photosBtn.classList.add('inactive')
+    sectionOne.classList.add('inactive')
+    sectionThree.classList.add('inactive')
+    sectionFour.classList.add('inactive')
+    sectionTwoDetails.classList.remove('inactive')
+    pageOneSectionTwo.classList.remove('inactive')
+
+    // if (pageNumber == 0) {
+    //     backBtn.classList.add('inactive')
+    // }
+    pageNumber == 0 ? backBtn.classList.add('inactive') : null
+
+    mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
+    // if (mainBtn.classList.contains('inactive')) {
+    //     mainBtn.classList.remove('inactive')
+    // }
+
+}
+
+const goToSectionThree = () => {
+    sectionNumber = 3
+    pageNumber = 0
+    // photosBtn.classList.add('inactive')
+    sectionOne.classList.add('inactive')
+    sectionTwo.classList.add('inactive')
+    sectionThree.classList.add('inactive')
+    sectionFour.classList.add('inactive')
+    sectionThreeDetails.classList.remove('inactive')
+    pageOneSectionThree.classList.remove('inactive')
+
+    if (pageNumber == 0) {
+        backBtn.classList.add('inactive')
+    }  
+    pageNumber == 0 ? nextBtn.classList.remove('inactive') : null
+    mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
+}
+
+
+
+
+
+
 
 
 const goBack = () => {
@@ -136,12 +189,26 @@ const goMain = () => {
         pageNumber = 0
     }
 
+    if (sectionNumber == 3) {
+        sectionOne.classList.remove('inactive')
+        sectionTwo.classList.remove('inactive')
+        sectionThree.classList.remove('inactive')
+        sectionFour.classList.remove('inactive')
+        sectionThreeDetails.classList.add('inactive')
+        pageOneSectionThree.classList.add('inactive')
+        pageTwoSectionThree.classList.add('inactive')
+    
+        sectionNumber = 3
+        pageNumber = 0
+    }
+
     backBtn.classList.add('inactive')
     mainBtn.classList.add('inactive')
     nextBtn.classList.add('inactive')
 
 
 }
+
 
 const goNext = () => {
     // sectionNumber = 1
@@ -160,52 +227,23 @@ const goNext = () => {
         nextBtn.classList.add('inactive')
         // pageNumber -=1
     }
+// sectionNumber == 2 nie istnieje
+
+    if ((sectionNumber == 3) && (pageNumber == 1)) {
+        pageOneSectionThree.classList.add('inactive')
+        pageTwoSectionThree.classList.remove('inactive')
+         
+        nextBtn.classList.add('inactive')
+        // pageNumber -=1
+    }
+
+
+
     sectionNumber = 1
     pageNumber += 1
 
 }
 
-
-
-// section Two
-
-const goToSectionTwoDetails = () => {
-    sectionNumber = 2
-    pageNumber = 0
-    photosBtn.classList.add('inactive')
-    sectionOne.classList.add('inactive')
-    sectionThree.classList.add('inactive')
-    sectionFour.classList.add('inactive')
-    sectionTwoDetails.classList.remove('inactive')
-    pageOneSectionTwo.classList.remove('inactive')
-
-    // if (pageNumber == 0) {
-    //     backBtn.classList.add('inactive')
-    // }
-    pageNumber == 0 ? backBtn.classList.add('inactive') : null
-
-    mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
-    // if (mainBtn.classList.contains('inactive')) {
-    //     mainBtn.classList.remove('inactive')
-    // }
-
-}
-
-const goToSectionThree = () => {
-    sectionNumber = 3
-    pageNumber = 0
-    // photosBtn.classList.add('inactive')
-    sectionOne.classList.add('inactive')
-    sectionTwo.classList.add('inactive')
-    sectionThree.classList.add('inactive')
-    sectionFour.classList.add('inactive')
-    sectionThreeDetails.classList.remove('inactive')
-    pageOneSectionThree.classList.remove('inactive')
-
-    if (pageNumber == 0) {
-        backBtn.classList.add('inactive')
-    }  
-}
 
 
 const setListenerForMain = () => {
