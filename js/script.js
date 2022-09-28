@@ -48,6 +48,9 @@ const goToSectionOneDetails = () => {
     if (nextBtn.classList.contains('inactive')) {
         nextBtn.classList.remove('inactive')
     }
+    if (mainBtn.classList.contains('inactive')) {
+        mainBtn.classList.remove('inactive')
+    }
         
         pageNumber +=1
     console.log('Next -> '+sectionNumber+', page: '+pageNumber)
@@ -133,6 +136,11 @@ const goMain = () => {
         pageNumber = 0
     }
 
+    backBtn.classList.add('inactive')
+    mainBtn.classList.add('inactive')
+    nextBtn.classList.add('inactive')
+
+
 }
 
 const goNext = () => {
@@ -171,9 +179,16 @@ const goToSectionTwoDetails = () => {
     sectionTwoDetails.classList.remove('inactive')
     pageOneSectionTwo.classList.remove('inactive')
 
-    if (pageNumber == 0) {
-        backBtn.classList.add('inactive')
-    }
+    // if (pageNumber == 0) {
+    //     backBtn.classList.add('inactive')
+    // }
+    pageNumber == 0 ? backBtn.classList.add('inactive') : null
+
+    mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
+    // if (mainBtn.classList.contains('inactive')) {
+    //     mainBtn.classList.remove('inactive')
+    // }
+
 }
 
 const goToSectionThree = () => {
@@ -196,17 +211,25 @@ const goToSectionThree = () => {
 const setListenerForMain = () => {
     mainsBtns.forEach((btn) => {
         btn.addEventListener('click', goMain)
+        
     })
+// const goMain = () => {
+//     mainsBtns.forEach((btn) => {
+//         btn.addEventListener('click', goMain)
+        
+//     })
+
+    
     
 }
 
 programmingBtn.addEventListener('click', goToSectionOneDetails);
 backBtn.addEventListener('click', goBack)
-// mainBtn.addEventListener('click', goMain)
+mainBtn.addEventListener('click', goMain)
 nextBtn.addEventListener('click', goNext)
-// programmingBtn.addEventListener('click', goToSectionOneDetails);
-// ustawiam listenera na wszytskie guziki main:
-document.addEventListener('DOMContentLoaded', setListenerForMain)
+
+// ustawiam listenera na wszytskie guziki main: - już nie potrzebne jest teraz jeden Main
+// document.addEventListener('DOMContentLoaded', setListenerForMain)
 photosBtn.addEventListener('click', goToSectionTwoDetails)
 hobbyBtn.addEventListener('click', goToSectionThree);
 // aboutBtn.addEventListener('click', goToSectionAbout);

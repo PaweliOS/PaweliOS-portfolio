@@ -105,7 +105,6 @@ body {
 // sekcje guzików: programowanie, obrazy, hobby, o mnie
 .sections {
     position: relative;
-
     
     // width: 100%;
         // height: 100%;
@@ -257,11 +256,12 @@ body {
 }
 .section-one-details, .section-two-details, .section-three-details {
 width: 100%;
-    height: 100%;
+    height: 70vh;
     padding: 2rem 3rem 0 4rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 15px rgb(14, 34, 164);
+    overflow: auto;
 }
 
 .section-one-details-page-one,
@@ -302,13 +302,14 @@ width: 100%;
 
 .move-btns {
     position: relative;
-    text-align: center;
+    // text-align: center;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-top: 2rem;
     // display: none;
     // justify-content: space-between;
-   bottom: 2rem;
+//    bottom: 2rem;
 
     &__btns {
         position: relative;
@@ -348,17 +349,12 @@ width: 100%;
 
 .section-gallery  {
     // display: none;
-    position: absolute;
+    position: relative;
     @include sectionHeight(740px);
-    top: 20px;
-    right: 40px;
-    bottom: 40px;
-    left: 300px;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 15px rgb(14, 34, 164);
     padding: 20px 40px 40px;
  
-
     &__title {
         text-align: center;
         font-weight: 100;
@@ -367,22 +363,11 @@ width: 100%;
         text-transform: capitalize;
     }
 
-    // Wykorzystaj do li
-
-    // &__item::before {
-    //     width: 1.75em;
-    //     height: 1.75em;
-    //     position: absolute; left: -25px;        
-    //     margin-right: 12px;       
-    //     content: '4.';
-    //     counter-increment: li;
-    // }
-
     &__fence {
         position: relative;
         overflow: hidden;
         margin-top: 30px;
-        height: 570px;
+        height: 560px;
     }
     &__grid {
         display: grid;
@@ -424,8 +409,12 @@ width: 100%;
     // bottom: 10px;
     // left: 50%;
     // transform: translateX(-50%);
-    // bottom: -10px;
-    color: rgb(12, 7, 161);
+    bottom: -1px;
+    margin-bottom: 20px;
+    color: rgb(245, 245, 248);
+    line-height: 3rem;
     font-size: 2rem;
     text-align: center;
+    background: linear-gradient(45deg, #13046F,rgb(2, 4, 55));
+
 }
