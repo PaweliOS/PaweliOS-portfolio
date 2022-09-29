@@ -471,48 +471,61 @@ width: 100%;
     padding-right: 2rem;
     padding-bottom: 2rem;
 
+    
+
+
     &__intro {
         margin: 2rem;
         font-size: 3rem;
     }
+
+
+
     &__text {
-        transition: scale .6s
-    }
-
-    &__text:hover {
-        scale: (1.1);
-        
-    }
-
-
-    &__text-one,
-    &__text-two,
-    &__text-three,
-    &__text-four,
-    &__text-five {
-        margin-left: 6rem;
-        // width: 80%;
-        // height: 100%;
+        transition: scale .6s, color .6s;
+        margin-bottom: 3rem;
         color: rgb(177, 176, 176);
         background: none;
         font-size: 2rem;
         font-weight: 100;
         line-height: 2.6rem;
         text-align: justify;
+
+
     }
 
-    &__text-two,
-    &__text-four,
-    &__text-five {
-        margin: 1rem 4rem 1rem 0;
+    &__text:hover {
+        scale: (1.1);
+        color: white;
+        
     }
 
-    &__text-five {
+    p.github-address {
         margin-bottom: 2rem;
     }
 
+    &__text:nth-of-type(even) {
+        margin-left: 6rem;
+    }
+
+    &__text:nth-of-type(odd) {
+        margin-right: 4rem;
+    }
+    &__text-four {
+        margin-right: 4rem;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    &__text-five {
+        margin-right: 4rem;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
 
 }
+
+
+
 
 .footer {
     position: relative;
