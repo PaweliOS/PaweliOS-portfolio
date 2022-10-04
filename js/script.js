@@ -1,8 +1,8 @@
 const sections = document.querySelectorAll('.sections')
 const programmingBtn = document.querySelector('.section-one__programming-btn')
 const photosBtn = document.querySelector('.section-two__photos-btn')
-const hobbyBtn = document.querySelector('.section-three__hobby-btn')
-const aboutBtn = document.querySelector('.section-four__about-btn')
+// const hobbyBtn = document.querySelector('.section-three__hobby-btn')
+const aboutBtn = document.querySelector('.section-three__about-btn')
 
 const mainsBtns = document.querySelectorAll('.move-btns__main')
 const backBtn = document.querySelector('.move-btns__back')
@@ -96,10 +96,9 @@ const goToSectionThree = () => {
     sectionThreeDetails.classList.remove('inactive')
     pageOneSectionThree.classList.remove('inactive')
 
-    if (pageNumber == 0) {
-        backBtn.classList.add('inactive')
-    }  
-    pageNumber == 0 ? nextBtn.classList.remove('inactive') : null
+
+    pageNumber == 0 ? backBtn.classList.add('inactive') : null
+    pageNumber == 0 ? nextBtn.classList.add('inactive') : null
     mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
 }
 
@@ -196,7 +195,7 @@ const goMain = () => {
         sectionFour.classList.remove('inactive')
         sectionThreeDetails.classList.add('inactive')
         pageOneSectionThree.classList.add('inactive')
-        pageTwoSectionThree.classList.add('inactive')
+        
     
         sectionNumber = 3
         pageNumber = 0
@@ -269,5 +268,5 @@ nextBtn.addEventListener('click', goNext)
 // ustawiam listenera na wszytskie guziki main: - już nie potrzebne jest teraz jeden Main
 // document.addEventListener('DOMContentLoaded', setListenerForMain)
 photosBtn.addEventListener('click', goToSectionTwoDetails)
-hobbyBtn.addEventListener('click', goToSectionThree);
+aboutBtn.addEventListener('click', goToSectionThree);
 // aboutBtn.addEventListener('click', goToSectionAbout);

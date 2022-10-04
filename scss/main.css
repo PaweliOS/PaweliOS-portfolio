@@ -250,18 +250,18 @@ body {
   font-weight: 100;
   line-height: 140px;
 }
-.sections__hobby {
+.sections__about {
   z-index: 1;
   color: rgb(255, 249, 249);
   opacity: 1;
   -webkit-animation: lightShow 2s linear;
           animation: lightShow 2s linear;
 }
-.sections__hobby--title-two {
+.sections__about--title-two {
   font-weight: 100;
   line-height: 140px;
 }
-.sections__about {
+.sections__contact {
   left: 20%;
   color: rgb(255, 249, 249);
   opacity: 1;
@@ -269,7 +269,7 @@ body {
           animation: lightShow 2s linear;
   z-index: 1;
 }
-.sections__about--title-two {
+.sections__contact--title-two {
   font-weight: 100;
   line-height: 140px;
 }
@@ -397,61 +397,6 @@ body {
   border-radius: 8px;
 }
 
-.section-three-details {
-  position: relative;
-  height: 740px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 15px rgb(14, 34, 164);
-  padding: 20px 40px 40px;
-}
-.section-three-details__title {
-  text-align: center;
-  font-weight: 100;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-}
-.section-three-details__fence {
-  position: relative;
-  overflow: hidden;
-  margin-top: 30px;
-  height: 560px;
-}
-.section-three-details__grid {
-  display: grid;
-  position: relative;
-  top: -100px;
-  grid-template-columns: auto auto auto auto;
-  margin-top: 3rem;
-  gap: 3rem;
-  -webkit-animation: galeryMove 30s infinite linear;
-          animation: galeryMove 30s infinite linear;
-}
-.section-three-details__pics {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(42, 28, 204, 0.1);
-  overflow: hidden;
-}
-.section-three-details img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.section-three-details-page-one {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.section-three-details-page-one__title {
-  text-align: center;
-  font-weight: 100;
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 .move-btns {
   position: relative;
   width: 100%;
@@ -492,6 +437,13 @@ body {
   padding-right: 2rem;
   padding-bottom: 2rem;
 }
+.section-three-details-page-one__title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 .section-three-details-page-one__intro {
   margin: 2rem;
   font-size: 3rem;
@@ -510,14 +462,16 @@ body {
   scale: 1.1;
   color: white;
 }
-.section-three-details-page-one p.github-address {
+.section-three-details-page-one a.github-address {
   margin-bottom: 2rem;
+  color: rgb(177, 176, 176);
 }
 .section-three-details-page-one__text:nth-of-type(even) {
   margin-left: 6rem;
 }
 .section-three-details-page-one__text:nth-of-type(odd) {
-  margin-right: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .section-three-details-page-one__text-four {
   margin-right: 4rem;
@@ -528,6 +482,11 @@ body {
   margin-right: 4rem;
   margin-left: 0;
   margin-top: 2rem;
+}
+.section-three-details-page-one__page-number {
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .footer {
