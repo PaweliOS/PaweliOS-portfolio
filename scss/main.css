@@ -147,7 +147,7 @@ body {
   transform: translateX(-50%);
   margin-top: 4px;
 }
-.underline__section-one-details--page-one-title, .underline__section-one-details--page-two-title, .underline__section-one-details--page-three-title {
+.underline__section-one-details--page-one-title, .underline__section-one-details--page-two-title, .underline__section-one-details--page-three-title, .underline__section-one-details--page-two-title {
   width: 400px;
 }
 .underline__section-two-details--page-one-title {
@@ -155,6 +155,9 @@ body {
 }
 .underline__section-three-details--page-one-title {
   width: 120px;
+}
+.underline__section-four-details--page-one-title {
+  width: 140px;
 }
 
 .wrapper {
@@ -313,7 +316,7 @@ body {
   font-size: 2rem;
 }
 
-.section-one-details, .section-two-details, .section-three-details {
+.section-one-details, .section-two-details, .section-three-details, .section-four-details {
   width: 100%;
   height: 67vh;
   padding: 2rem 3rem 0 4rem;
@@ -325,14 +328,16 @@ body {
 
 .section-one-details-page-one,
 .section-one-details-page-two,
-.section-one-details-page-three {
+.section-one-details-page-three,
+.section-four-details-page-one {
   position: relative;
   width: 100%;
   height: 100%;
 }
 .section-one-details-page-one__title,
 .section-one-details-page-two__title,
-.section-one-details-page-three__title {
+.section-one-details-page-three__title,
+.section-four-details-page-one__title {
   text-align: center;
   font-weight: 100;
   font-size: 3rem;
@@ -341,7 +346,8 @@ body {
 }
 .section-one-details-page-one__list,
 .section-one-details-page-two__list,
-.section-one-details-page-three__list {
+.section-one-details-page-three__list,
+.section-four-details-page-one__list {
   font-size: 2.5rem;
 }
 
@@ -488,6 +494,24 @@ body {
   position: relative;
   font-size: 2rem;
   text-align: center;
+}
+
+.section-four-details-page-one__email {
+  display: inline-block;
+  margin-top: 10vh;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(42, 28, 204, 0.1);
+  border-radius: 8px;
+}
+.section-four-details-page-one__email-topic {
+  margin-bottom: 2rem;
+}
+.section-four-details-page-one__email-text {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
 }
 
 .footer {
