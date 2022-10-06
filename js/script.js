@@ -32,6 +32,8 @@ const pageOneSectionFour = document.querySelector('.section-four-details-page-on
 
 const sectionGallery = document.querySelector('.section-gallery')
 
+const linkTextEmail = document.querySelector('.section-four-details-page-one__text-email')
+
 
 let sectionNumber
 let pageNumber
@@ -281,6 +283,12 @@ const setListenerForMain = () => {
     
 }
 
+// const hideBackgroundParent = () => {
+//     linkTextEmail.closest('.section-four-details-page-one__email').classList.add('backgroundHidding')
+// }
+
+
+
 programmingBtn.addEventListener('click', goToSectionOneDetails);
 backBtn.addEventListener('click', goBack)
 mainBtn.addEventListener('click', goMain)
@@ -293,3 +301,5 @@ aboutBtn.addEventListener('click', goToSectionThree)
 contactBtn.addEventListener('click', goToSectionFour)
    
 // aboutBtn.addEventListener('click', goToSectionAbout);
+
+// linkTextEmail.addEventListener('click', hideBackgroundParent)

@@ -496,22 +496,45 @@ body {
   text-align: center;
 }
 
+.section-four-details-page-one__box {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .section-four-details-page-one__email {
-  display: inline-block;
-  margin-top: 10vh;
   font-size: 2rem;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  margin: 10rem 2rem 10rem 0;
   background-color: rgba(42, 28, 204, 0.1);
   border-radius: 8px;
+  border: 1px solid rgba(42, 28, 204, 0);
+  transition: 0.8s background-color, 0.8s border;
 }
-.section-four-details-page-one__email-topic {
-  margin-bottom: 2rem;
+.section-four-details-page-one__email:hover {
+  background-color: rgba(42, 28, 204, 0);
+  border: 1px solid rgb(15, 4, 133);
 }
-.section-four-details-page-one__email-text {
+.section-four-details-page-one__text {
   color: white;
   text-decoration: none;
   font-weight: 100;
+}
+.section-four-details-page-one__github {
+  align-self: flex-end;
+  font-size: 2rem;
+  text-align: center;
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  background-color: rgba(42, 28, 204, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(42, 28, 204, 0);
+  transition: 0.8s background-color, 0.8s border;
+}
+.section-four-details-page-one__github:hover {
+  background-color: rgba(42, 28, 204, 0);
+  border: 1px solid rgb(15, 4, 133);
 }
 
 .footer {
