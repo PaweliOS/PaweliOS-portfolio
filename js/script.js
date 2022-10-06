@@ -224,6 +224,19 @@ const goMain = () => {
         pageNumber = 0
     }
 
+    if (sectionNumber == 4) {
+        sectionOne.classList.remove('inactive')
+        sectionTwo.classList.remove('inactive')
+        sectionThree.classList.remove('inactive')
+        sectionFour.classList.remove('inactive')
+        sectionFourDetails.classList.add('inactive')
+        pageOneSectionFour.classList.add('inactive')
+        
+    
+        sectionNumber = 3
+        pageNumber = 0
+    }
+
     backBtn.classList.add('inactive')
     mainBtn.classList.add('inactive')
     nextBtn.classList.add('inactive')
