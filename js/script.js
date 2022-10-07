@@ -36,6 +36,9 @@ const linkTextEmail = document.querySelector('.section-four-details-page-one__te
 
 const linkEmail = document.querySelector('.section-four-details-page-one__text-email')
 
+const emailPlace = document.querySelector('.section-four-details-page-one__email')
+const emailAddress = document.createElement('a')
+
 let sectionNumber
 let pageNumber
 
@@ -302,7 +305,17 @@ const setListenerForMain = () => {
 // }
 
 const fillEmail = () => {
-	linkEmail.innerHTML =atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
+    let emailCoded = atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
+    emailAddress.textContent = emailCoded
+    emailAddress.href = 'mailto:'+ emailCoded
+    emailAddress.style.textDecoration = 'none'
+    emailAddress.style.color = 'white'
+    emailAddress.style.fontWeight = '100'
+    emailAddress.classList.add('section-four-details-page-one__text')
+    emailAddress.classList.add('section-four-details-page-one__text-email')
+    emailPlace.append(emailAddress)
+    // linkEmail.outerHTML = 'class=" section-four-details-page-one__text section-four-details-page-one__text-email" href="mailto:mirrorpawel.pabisiak@gmail.com"'
+	// linkEmail.innerHTML ='<i class="fa-regular fa-envelope"></i> '+ emailCoded
 	// linkEmail.innerHTML = '<i class="fa-regular fa-envelope"></i> '+ atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
 }
 
