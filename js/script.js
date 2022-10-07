@@ -34,6 +34,7 @@ const sectionGallery = document.querySelector('.section-gallery')
 
 const linkTextEmail = document.querySelector('.section-four-details-page-one__text-email')
 
+const linkEmail = document.querySelector('.section-four-details-page-one__text-email')
 
 let sectionNumber
 let pageNumber
@@ -299,6 +300,13 @@ const setListenerForMain = () => {
 // const hideBackgroundParent = () => {
 //     linkTextEmail.closest('.section-four-details-page-one__email').classList.add('backgroundHidding')
 // }
+
+const fillEmail = () => {
+	linkEmail.innerHTML =atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
+	// linkEmail.innerHTML = '<i class="fa-regular fa-envelope"></i> '+ atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
+}
+
+fillEmail();
 
 
 
