@@ -232,7 +232,7 @@ body {
   box-shadow: 0 5px 20px white;
 }
 .sections__programming {
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem;
   z-index: 1;
   color: rgb(255, 249, 249);
   opacity: 1;
@@ -244,7 +244,7 @@ body {
   line-height: 45px;
 }
 .sections__photos {
-  left: 40%;
+  margin: 0 auto 4rem;
   color: rgb(255, 249, 249);
   opacity: 1;
   -webkit-animation: lightShow 2s linear;
@@ -256,7 +256,7 @@ body {
   line-height: 45px;
 }
 .sections__about {
-  left: 20%;
+  margin: 0 auto 4rem;
   z-index: 1;
   color: rgb(255, 249, 249);
   opacity: 1;
@@ -268,7 +268,7 @@ body {
   line-height: 45px;
 }
 .sections__contact {
-  left: 40%;
+  margin: 0 auto 4rem;
   color: rgb(255, 249, 249);
   opacity: 1;
   -webkit-animation: lightShow 2s linear;
@@ -566,28 +566,28 @@ body {
     font-size: 1.7rem;
   }
   .sections__programming {
-    left: 15%;
+    margin: 0 auto 4rem 15%;
   }
   .sections__programming--title-two {
     font-weight: 100;
     line-height: 45px;
   }
   .sections__photos {
-    left: 40%;
+    margin: 0 auto 4rem 40%;
   }
   .sections__photos--title-two {
     font-weight: 100;
     line-height: 45px;
   }
   .sections__about {
-    left: 15%;
+    margin: 0 auto 4rem 15%;
   }
   .sections__about--title-two {
     font-weight: 100;
     line-height: 45px;
   }
   .sections__contact {
-    left: 40%;
+    margin: 0 auto 4rem 40%;
   }
   .sections__contact--title-two {
     font-weight: 100;
@@ -610,28 +610,28 @@ body {
     font-size: 3rem;
   }
   .sections__programming {
-    left: 0;
+    margin: 0 auto 4rem 0;
   }
   .sections__programming--title-two {
     font-weight: 100;
     line-height: 140px;
   }
   .sections__photos {
-    left: 20%;
+    margin: 0 auto 4rem 20%;
   }
   .sections__photos--title-two {
     font-weight: 100;
     line-height: 140px;
   }
   .sections__about {
-    left: 0;
+    margin: 0 auto 4rem 0;
   }
   .sections__about--title-two {
     font-weight: 100;
     line-height: 140px;
   }
   .sections__contact {
-    left: 20%;
+    margin: 0 auto 4rem 20%;
   }
   .sections__contact--title-two {
     font-weight: 100;
