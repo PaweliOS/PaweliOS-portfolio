@@ -321,11 +321,12 @@ body {
 .section-one-details, .section-two-details, .section-three-details, .section-four-details {
   width: 100%;
   height: 67vh;
-  padding: 2rem 3rem 0 4rem;
+  padding: 2rem 2rem 0 4rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 15px rgb(14, 34, 164);
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .section-one-details-page-one,
@@ -466,10 +467,6 @@ body {
   line-height: 2.6rem;
   text-align: justify;
 }
-.section-three-details-page-one__text:hover {
-  scale: 1.1;
-  color: white;
-}
 .section-three-details-page-one a.github-address {
   margin-bottom: 2rem;
   color: rgb(177, 176, 176);
@@ -501,10 +498,9 @@ body {
   width: 100%;
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .section-four-details-page-one__email {
-  font-size: 2rem;
   text-align: center;
   padding: 1rem 2rem;
   margin: 10rem 2rem 10rem 0;
@@ -512,6 +508,7 @@ body {
   border-radius: 8px;
   border: 1px solid rgba(42, 28, 204, 0);
   transition: 0.8s background-color, 0.8s border;
+  font-size: 1.4rem;
 }
 .section-four-details-page-one__email:hover {
   background-color: rgba(42, 28, 204, 0);
@@ -523,8 +520,6 @@ body {
   font-weight: 100;
 }
 .section-four-details-page-one__github {
-  align-self: flex-end;
-  font-size: 2rem;
   text-align: center;
   margin-right: 2rem;
   padding: 1rem 2rem;
@@ -532,6 +527,7 @@ body {
   border-radius: 8px;
   border: 1px solid rgba(42, 28, 204, 0);
   transition: 0.8s background-color, 0.8s border;
+  font-size: 1.4rem;
 }
 .section-four-details-page-one__github:hover {
   background-color: rgba(42, 28, 204, 0);
@@ -550,6 +546,11 @@ body {
   background: linear-gradient(45deg, #13046F, rgb(2, 4, 55));
 }
 
+@media (min-width: 450px) {
+  .section-four-details-page-one__text {
+    font-size: 2rem;
+  }
+}
 @media (min-width: 576px) {
   .header__title {
     font-size: 5rem;
@@ -592,6 +593,16 @@ body {
   .sections__contact--title-two {
     font-weight: 100;
     line-height: 45px;
+  }
+  .section-three-details-page-one__text:hover {
+    scale: 1.1;
+    color: white;
+  }
+  .section-four-details-page-one__email {
+    align-self: flex-start;
+  }
+  .section-four-details-page-one__github {
+    align-self: flex-end;
   }
 }
 @media (min-width: 850px) {

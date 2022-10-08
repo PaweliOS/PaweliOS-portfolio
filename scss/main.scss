@@ -277,13 +277,14 @@ body {
     font-size: 2rem;
 }
 .section-one-details, .section-two-details, .section-three-details, .section-four-details {
-width: 100%;
+    width: 100%;
     height: 67vh;
-    padding: 2rem 3rem 0 4rem;
+    padding: 2rem 2rem 0 4rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 15px rgb(14, 34, 164);
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .section-one-details-page-one,
@@ -483,11 +484,11 @@ width: 100%;
 
     }
 
-    &__text:hover {
-        scale: (1.1);
-        color: white;
+        // &__text:hover {
+        //     scale: (1.1);
+        //     color: white;
         
-    }
+    // }
 
         a.github-address {
         margin-bottom: 2rem;
@@ -527,14 +528,13 @@ width: 100%;
         width: 100%;
         display: inline-flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         
         // height: 100%;
     }
 
 
     &__email {
-        font-size: 2rem;
         text-align: center;
         padding: 1rem 2rem;
         margin: 10rem 2rem 10rem 0;
@@ -542,6 +542,7 @@ width: 100%;
         border-radius: 8px;
         border: 1px solid rgba(42, 28, 204, 0);
         transition: .8s background-color, .8s border ;
+        font-size: 1.4rem;
 
     }
 
@@ -550,9 +551,7 @@ width: 100%;
         border: 1px solid rgb(15, 4, 133);
     }
 
-    &__topic {
-        // margin-bottom: 2rem;
-    }
+ 
 
     &__text {
         color: white;
@@ -560,20 +559,16 @@ width: 100%;
         font-weight: 100;
     }
 
-    // &__text:hover div.section-four-details-page-one__email {
-    //     background-color: white;
-    // }
 
     &__github {
-        align-self: flex-end;
-        font-size: 2rem;
-        text-align: center;
-        margin-right: 2rem;
-        padding: 1rem 2rem;
-        background-color: rgba(42, 28, 204, 0.1);
-        border-radius: 8px;
-        border: 1px solid rgba(42, 28, 204, 0);
-        transition: .8s background-color, .8s border ;
+            text-align: center;
+            margin-right: 2rem;
+            padding: 1rem 2rem;
+            background-color: rgba(42, 28, 204, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(42, 28, 204, 0);
+            transition: .8s background-color, .8s border ;
+            font-size: 1.4rem;
     }
 
     &__github:hover {
@@ -598,6 +593,13 @@ width: 100%;
 }
 
 
+@media (min-width: 450px) {
+    .section-four-details-page-one {
+        &__text {
+            font-size: 2rem;
+        }
+    }
+}
 
 @media (min-width: 576px) {
     .header {
@@ -659,6 +661,24 @@ width: 100%;
              font-weight: 100;
             line-height: 45px;
             }
+        }
+
+    }
+    .section-three-details-page-one {
+        &__text:hover {
+            scale: (1.1);
+            color: white;
+        }
+    }
+
+    .section-four-details-page-one {
+
+        &__email {
+            align-self: flex-start;
+        }
+
+        &__github {
+            align-self: flex-end;
         }
 
     }
