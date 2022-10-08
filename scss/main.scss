@@ -348,14 +348,23 @@ body {
         margin-top: 30px;
         height: 500px;
     }
+    // &__grid {
+    //     display: grid;
+    //     position: relative;
+    //     top: -100px;
+    //     grid-template-columns: auto auto auto auto;
+    //     margin-top: 3rem;
+    //     gap: 3rem;
+    //     animation: galeryMove 30s infinite linear;
+    // }
     &__grid {
         display: grid;
         position: relative;
         top: -100px;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto;
         margin-top: 3rem;
         gap: 3rem;
-        animation: galeryMove 30s infinite linear;
+        animation: galeryMove 120s infinite linear;
     }
 
     &__pics {
@@ -372,34 +381,6 @@ body {
         border-radius: 8px;
     }
 }
-
-// .section-three-details  {
-//     // display: none;
-//     position: relative;
-//     @include sectionHeight(740px);
-//     background-color: rgba(0, 0, 0, 0.2);
-//     box-shadow: 0px 0px 15px rgb(14, 34, 164);
-//     padding: 20px 40px 40px;
-// }
-
-// .section-three-details-page-one  {
-//     position: relative;
-//     width: 100%;
-//     height: 100%;
-
-//     &__title {
-    //         text-align: center;
-    //         font-weight: 100;
-    //         font-size: 3rem;
-    //         text-transform: uppercase;
-    //         letter-spacing: 2px;
-    //     }
-    //     &__page-number {
-    //         position: relative;
-    //         margin-bottom: 1rem;
-    //         z-index: 5;
-    //     }
-    // }
 
 .move-btns {
     position: relative;
@@ -664,6 +645,17 @@ body {
         }
 
     }
+
+    .section-two-details {
+        &__grid {
+            grid-template-columns: auto auto;
+            animation: galeryMove 90s infinite linear;
+        }
+    }
+
+
+
+
     .section-three-details-page-one {
         &__text:hover {
             scale: (1.1);
@@ -684,9 +676,14 @@ body {
     }
 }
 
-// @media (min-width: 768px) {
-    
-// }
+@media (min-width: 768px) {
+    .section-two-details {
+        &__grid {
+            grid-template-columns: auto auto auto;
+            animation: galeryMove 90s infinite linear;
+        }
+    }
+}
 
 @media (min-width: 850px) {
 
@@ -751,6 +748,15 @@ body {
         }
 
     }
+
+    .section-two-details {
+        &__grid {
+            grid-template-columns: auto auto auto auto;
+            animation: galeryMove 30s infinite linear;
+        }
+    }
+
+
 }
 
 

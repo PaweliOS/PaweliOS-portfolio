@@ -388,11 +388,11 @@ body {
   display: grid;
   position: relative;
   top: -100px;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto;
   margin-top: 3rem;
   gap: 3rem;
-  -webkit-animation: galeryMove 30s infinite linear;
-          animation: galeryMove 30s infinite linear;
+  -webkit-animation: galeryMove 120s infinite linear;
+          animation: galeryMove 120s infinite linear;
 }
 .section-two-details__pics {
   display: flex;
@@ -594,6 +594,11 @@ body {
     font-weight: 100;
     line-height: 45px;
   }
+  .section-two-details__grid {
+    grid-template-columns: auto auto;
+    -webkit-animation: galeryMove 90s infinite linear;
+            animation: galeryMove 90s infinite linear;
+  }
   .section-three-details-page-one__text:hover {
     scale: 1.1;
     color: white;
@@ -603,6 +608,13 @@ body {
   }
   .section-four-details-page-one__github {
     align-self: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  .section-two-details__grid {
+    grid-template-columns: auto auto auto;
+    -webkit-animation: galeryMove 90s infinite linear;
+            animation: galeryMove 90s infinite linear;
   }
 }
 @media (min-width: 850px) {
@@ -647,5 +659,10 @@ body {
   .sections__contact--title-two {
     font-weight: 100;
     line-height: 140px;
+  }
+  .section-two-details__grid {
+    grid-template-columns: auto auto auto auto;
+    -webkit-animation: galeryMove 30s infinite linear;
+            animation: galeryMove 30s infinite linear;
   }
 }/*# sourceMappingURL=main.css.map */
