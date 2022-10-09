@@ -76,7 +76,7 @@ body {
 .header {
     position: absolute;
     width: 100%;
-    padding: 4rem 0 6rem;
+    padding: 2rem 0 6rem;
     z-index: 5;
     &__title {
         text-align: center;
@@ -109,7 +109,7 @@ body {
         // justify-content: space-between;
         width: 100%;
         height: 100%;
-        padding: 130px 10px 40px 10px;
+        padding: 100px 10px 40px 10px;
     }
 
     &__person-img {
@@ -310,7 +310,7 @@ body {
 
 .section-one-details-page-one, .section-one-details-page-three {
     &__list {
-        margin-top: 120px;
+        margin-top: 40px;
     }
 }
 .section-one-details-page-two {
@@ -575,6 +575,22 @@ body {
 
 
 @media (min-width: 450px) {
+
+    .header {
+        padding: 4rem 0 6rem;
+    }
+
+    .main {
+        padding: 130px 10px 40px 10px;
+    }
+
+    .section-one-details-page-one, .section-one-details-page-three {
+        &__list {
+            margin-top: 120px;
+        }
+    }    
+
+
     .section-four-details-page-one {
         &__text {
             font-size: 2rem;
