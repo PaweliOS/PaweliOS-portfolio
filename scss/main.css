@@ -192,7 +192,7 @@ body {
 .main__data {
   width: 100%;
   height: 100%;
-  padding: 100px 10px 40px 10px;
+  padding: 100px 10px 20px 10px;
 }
 .main__person-img {
   display: none;
@@ -310,18 +310,26 @@ body {
   margin-top: 3rem;
 }
 
-.page-number {
+.page {
   position: absolute;
-  right: 50%;
-  top: calc(100% - 30px);
+  padding: 0.9rem 0 0;
+  bottom: 0;
+  left: 50%;
+}
+.page__number {
+  display: block;
+  position: relative;
   color: white;
   font-size: 2rem;
+}
+.page__section-one--page-three {
+  bottom: 0;
 }
 
 .section-one-details, .section-two-details, .section-three-details, .section-four-details {
   width: 100%;
   height: 67vh;
-  padding: 2rem 4rem 0 4rem;
+  padding: 1rem 4rem 2rem 4rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 15px rgb(14, 34, 164);
@@ -570,6 +578,14 @@ body {
   }
   .section-one-details-page-two__list {
     margin-top: 100px;
+  }
+  .page-number {
+    position: absolute;
+    text-align: center;
+    bottom: -2rem;
+    right: 50%;
+    color: white;
+    font-size: 2rem;
   }
 }
 @media (min-width: 576px) {
