@@ -303,6 +303,12 @@ body {
     overflow-x: hidden;
 }
 
+.section-three-details {
+    padding: 1rem 2rem 2rem 0;
+}
+
+
+
 .section-one-details-page-one,
 .section-one-details-page-two,
 .section-one-details-page-three,
@@ -463,29 +469,29 @@ body {
 .section-three-details-page-one {
     
     // @include sectionHeight(740px);
-    padding-right: 2rem;
-    padding-bottom: 2rem;
+    // padding-right: 2rem;
+    // padding-bottom: 2rem;
 
     
         &__title {
                 text-align: center;
                 font-weight: 100;
-                font-size: 3rem;
+                font-size: 2.3rem;
                 text-transform: uppercase;
                 letter-spacing: 2px;
-            }
+        }
 
 
     &__intro {
         margin: 2rem;
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 
 
 
     &__text {
         transition: scale .6s, color .6s;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         color: rgb(177, 176, 176);
         background: none;
         font-size: 2rem;
@@ -516,12 +522,12 @@ body {
             margin-right: 2rem;
     }
     &__text-four {
-        margin-right: 4rem;
+        // margin-right: 4rem;
         margin-left: 0;
         margin-top: 2rem;
     }
     &__text-five {
-        margin-right: 4rem;
+        // margin-right: 2rem;
         margin-left: 0;
         margin-top: 2rem;
     }
@@ -622,18 +628,12 @@ body {
         }
     }
 
+
     .section-one-details-page-one, .section-one-details-page-three {
         &__list {
             margin-top: 120px;
         }
-    }    
-
-
-    .section-four-details-page-one {
-        &__text {
-            font-size: 2rem;
-        }
-    }
+    } 
 
     .section-one-details-page-one,
     .section-one-details-page-two,
@@ -648,6 +648,39 @@ body {
         }
         
     }
+
+    .section-three-details {
+        padding: 1rem 4rem 2rem 4rem;
+    }
+
+   
+
+    .section-three-details-page-one {
+        padding-right: 2rem;
+
+        &__title {
+            font-size: 3rem;
+        }
+        &__intro {
+            margin: 2rem;
+            font-size: 3rem;
+        }
+
+
+        &__text:hover {
+            scale: (1.1);
+            color: white;
+        }
+    }
+
+
+    .section-four-details-page-one {
+        &__text {
+            font-size: 2rem;
+        }
+    }
+
+
 
 
 }
@@ -720,16 +753,6 @@ body {
         &__grid {
             grid-template-columns: auto auto;
             animation: galeryMove 90s infinite linear;
-        }
-    }
-
-
-
-
-    .section-three-details-page-one {
-        &__text:hover {
-            scale: (1.1);
-            color: white;
         }
     }
 
