@@ -366,8 +366,8 @@ body {
 
     &__fence {
         position: relative;
-        overflow: hidden;
-        margin-top: 30px;
+        // overflow: hidden;
+        margin-top: 120px;
         height: 500px;
     }
     // &__grid {
@@ -386,7 +386,7 @@ body {
         grid-template-columns: auto;
         margin-top: 3rem;
         gap: 3rem;
-        animation: galeryMove 120s infinite linear;
+        // animation: galeryMove 120s infinite linear;
     }
 
     &__pics {
@@ -395,7 +395,7 @@ body {
         justify-content: center;
         background-color: rgba(42, 28, 204, 0.1);
         
-        overflow: hidden;
+        // overflow: hidden;
         
     }
     img {
@@ -771,7 +771,7 @@ body {
     .section-two-details {
         &__grid {
             grid-template-columns: auto auto;
-            animation: galeryMove 90s infinite linear;
+            // animation: galeryMove 90s infinite linear;
         }
     }
 
@@ -792,7 +792,7 @@ body {
     .section-two-details {
         &__grid {
             grid-template-columns: auto auto auto;
-            animation: galeryMove 90s infinite linear;
+            // animation: galeryMove 90s infinite linear;
         }
     }
 }
@@ -864,7 +864,7 @@ body {
     .section-two-details {
         &__grid {
             grid-template-columns: auto auto auto auto;
-            animation: galeryMove 30s infinite linear;
+            // animation: galeryMove 30s infinite linear;
         }
     }
 
