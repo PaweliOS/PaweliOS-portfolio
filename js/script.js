@@ -109,6 +109,9 @@ const goToSectionTwoDetails = () => {
         (mainBtn.classList.remove('inactive'),
         moveBox.classList.remove('inactive')
         ) : null
+    
+    pageBox.classList.remove('inactive')
+    pageN.classList.remove('inactive')
     // if (mainBtn.classList.contains('inactive')) {
     //     mainBtn.classList.remove('inactive')
     // }
@@ -129,7 +132,10 @@ const goToSectionThree = () => {
 
     pageNumber == 0 ? (backBtn.classList.add('inactive'), nextBtn.classList.add('inactive')) : null
 
-    mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')): null
+    mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')) : null
+    
+    pageBox.classList.remove('inactive')
+    pageN.classList.remove('inactive')
 }
 
 const goToSectionFour = () => {
@@ -145,7 +151,10 @@ const goToSectionFour = () => {
 
 
     pageNumber == 0 ? (backBtn.classList.add('inactive'), nextBtn.classList.add('inactive')) : null
-    mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')): null
+    mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')) : null
+    
+    pageBox.classList.remove('inactive')
+    pageN.classList.remove('inactive')
 }
 
 
