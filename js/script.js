@@ -5,6 +5,8 @@ const photosBtn = document.querySelector('.section-two__photos-btn')
 const aboutBtn = document.querySelector('.section-three__about-btn')
 const contactBtn = document.querySelector('.sections-four__contact-btn')
 
+
+const moveBox = document.querySelector('.move-btns')
 const mainsBtns = document.querySelectorAll('.move-btns__main')
 const backBtn = document.querySelector('.move-btns__back')
 const mainBtn = document.querySelector('.move-btns__main')
@@ -39,6 +41,10 @@ const linkEmail = document.querySelector('.section-four-details-page-one__text-e
 const emailPlace = document.querySelector('.section-four-details-page-one__email')
 const emailAddress = document.createElement('a')
 
+
+const pageBox = document.querySelector('.page')
+const pageN = document.querySelector('.page__number')
+
 let sectionNumber
 let pageNumber
 
@@ -63,9 +69,20 @@ const goToSectionOneDetails = () => {
     if (mainBtn.classList.contains('inactive')) {
         mainBtn.classList.remove('inactive')
     }
+    if (moveBox.classList.contains('inactive') && pageBox.classList.contains('inactive')) {
+        moveBox.classList.remove('inactive')
+        backBtn.classList.remove('inactive')
+        mainBtn.classList.remove('inactive')
+        nextBtn.classList.remove('inactive')
         
-        pageNumber +=1
-    console.log('Next -> '+sectionNumber+', page: '+pageNumber)
+        pageBox.classList.remove('inactive')
+        pageN.classList.remove('inactive')
+    }
+
+    pageNumber += 1
+    // pageN.textContent = pageNumber
+    console.log('Next -> ' + sectionNumber + ', page: ' + pageNumber)
+    pageN.textContent = pageNumber
 }
 
 
@@ -88,7 +105,10 @@ const goToSectionTwoDetails = () => {
     // }
     pageNumber == 0 ? backBtn.classList.add('inactive') : null
 
-    mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
+    mainBtn.classList.contains('inactive') ?
+        (mainBtn.classList.remove('inactive'),
+        moveBox.classList.remove('inactive')
+        ) : null
     // if (mainBtn.classList.contains('inactive')) {
     //     mainBtn.classList.remove('inactive')
     // }
@@ -107,9 +127,9 @@ const goToSectionThree = () => {
     pageOneSectionThree.classList.remove('inactive')
 
 
-    pageNumber == 0 ? backBtn.classList.add('inactive') : null
-    pageNumber == 0 ? nextBtn.classList.add('inactive') : null
-    mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
+    pageNumber == 0 ? (backBtn.classList.add('inactive'), nextBtn.classList.add('inactive')) : null
+
+    mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')): null
 }
 
 const goToSectionFour = () => {
@@ -124,16 +144,9 @@ const goToSectionFour = () => {
     pageOneSectionFour.classList.remove('inactive')
 
 
-    pageNumber == 0 ? backBtn.classList.add('inactive') : null
-    pageNumber == 0 ? nextBtn.classList.add('inactive') : null
-    mainBtn.classList.contains('inactive') ? mainBtn.classList.remove('inactive') : null
+    pageNumber == 0 ? (backBtn.classList.add('inactive'), nextBtn.classList.add('inactive')) : null
+    mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')): null
 }
-
-
-
-
-
-
 
 
 const goBack = () => {
@@ -166,7 +179,8 @@ const goBack = () => {
         pageOne.classList.remove('inactive')
         // backBtn.classList.add('inactive')
         // sectionNumber = 1
-        pageNumber-=1
+        pageNumber -= 1
+        pageN.textContent = pageNumber
         // console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
     }
 
@@ -244,6 +258,9 @@ const goMain = () => {
     backBtn.classList.add('inactive')
     mainBtn.classList.add('inactive')
     nextBtn.classList.add('inactive')
+    moveBox.classList.add('inactive')
+    pageBox.classList.add('inactive')
+    pageN.classList.add('inactive')
 
 
 }
@@ -280,6 +297,8 @@ const goNext = () => {
 
     sectionNumber = 1
     pageNumber += 1
+    // console.log(pageNumber)
+    pageN.textContent = pageNumber
 
 }
 
@@ -319,7 +338,20 @@ const fillEmail = () => {
 	// linkEmail.innerHTML = '<i class="fa-regular fa-envelope"></i> '+ atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
 }
 
+const setFirstView = () => {
+    moveBox.classList.add('inactive')
+    backBtn.classList.add('inactive')
+    mainBtn.classList.add('inactive')
+    nextBtn.classList.add('inactive')
+    pageBox.classList.add('inactive')  
+    pageN.classList.add('inactive')  
+    
+}
+
+
+
 fillEmail();
+setFirstView();
 
 
 

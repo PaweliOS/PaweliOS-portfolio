@@ -181,10 +181,6 @@ body {
   z-index: 11;
 }
 
-.inactive {
-  display: none;
-}
-
 .main {
   position: relative;
   background: linear-gradient(45deg, #13046F, black);
@@ -310,22 +306,6 @@ body {
   margin-top: 3rem;
 }
 
-.page {
-  position: absolute;
-  padding: 0.9rem 0 0;
-  bottom: 0;
-  left: 50%;
-}
-.page__number {
-  display: block;
-  position: relative;
-  color: white;
-  font-size: 2rem;
-}
-.page__section-one--page-three {
-  bottom: 0;
-}
-
 .section-one-details, .section-two-details, .section-three-details, .section-four-details {
   width: 100%;
   height: 67vh;
@@ -360,6 +340,7 @@ body {
 .section-one-details-page-three__list,
 .section-four-details-page-one__list {
   font-size: 2rem;
+  padding-bottom: 2rem;
 }
 
 .section-one-details-page-one__list, .section-one-details-page-three__list {
@@ -414,12 +395,25 @@ body {
   border-radius: 8px;
 }
 
+.page {
+  position: relative;
+  width: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.page__number {
+  color: white;
+  font-size: 2rem;
+}
+
 .move-btns {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .move-btns__btns {
   position: relative;
@@ -496,11 +490,6 @@ body {
   margin-left: 0;
   margin-top: 2rem;
 }
-.section-three-details-page-one__page-number {
-  position: relative;
-  font-size: 2rem;
-  text-align: center;
-}
 
 .section-four-details-page-one__box {
   width: 100%;
@@ -562,6 +551,7 @@ body {
     padding: 4rem 0 6rem;
   }
   .main_data {
+    position: relative;
     padding: 130px 10px 40px 10px;
   }
   .section-one-details-page-one__list, .section-one-details-page-three__list {
@@ -578,14 +568,6 @@ body {
   }
   .section-one-details-page-two__list {
     margin-top: 100px;
-  }
-  .page-number {
-    position: absolute;
-    text-align: center;
-    bottom: -2rem;
-    right: 50%;
-    color: white;
-    font-size: 2rem;
   }
 }
 @media (min-width: 576px) {
