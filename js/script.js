@@ -152,7 +152,7 @@ const goToSectionFour = () => {
 
     pageNumber == 0 ? (backBtn.classList.add('inactive'), nextBtn.classList.add('inactive')) : null
     mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')) : null
-    
+
     pageBox.classList.remove('inactive')
     pageN.classList.remove('inactive')
 }
@@ -339,6 +339,7 @@ const fillEmail = () => {
     emailAddress.style.textDecoration = 'none'
     emailAddress.style.color = 'white'
     emailAddress.style.fontWeight = '100'
+    // emailAddress.style.fontSize = '1.5rem'
     emailAddress.classList.add('section-four-details-page-one__text')
     emailAddress.classList.add('section-four-details-page-one__text-email')
     emailPlace.append(emailAddress)

@@ -151,7 +151,7 @@ body {
   width: 300px;
 }
 .underline__section-two-details--page-one-title {
-  width: 300px;
+  width: 270px;
 }
 .underline__section-three-details--page-one-title {
   width: 120px;
@@ -367,7 +367,7 @@ body {
 .section-two-details__title {
   text-align: center;
   font-weight: 100;
-  font-size: 3rem;
+  font-size: 2.3rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -397,6 +397,9 @@ body {
 .section-two-details img {
   width: 100%;
   border-radius: 8px;
+}
+.section-two-details a.github-address {
+  font-size: 1.8rem;
 }
 
 .page {
@@ -489,6 +492,9 @@ body {
   margin-top: 2rem;
 }
 
+.section-four-details-page-one__title {
+  font-size: 2.3rem;
+}
 .section-four-details-page-one__box {
   width: 100%;
   display: inline-flex;
@@ -498,12 +504,12 @@ body {
 .section-four-details-page-one__email {
   text-align: center;
   padding: 1rem 2rem;
-  margin: 10rem 2rem 10rem 0;
+  margin: 10rem 0rem 10rem 0;
   background-color: rgba(42, 28, 204, 0.1);
   border-radius: 8px;
   border: 1px solid rgba(42, 28, 204, 0);
   transition: 0.8s background-color, 0.8s border;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .section-four-details-page-one__email:hover {
   background-color: rgba(42, 28, 204, 0);
@@ -516,13 +522,12 @@ body {
 }
 .section-four-details-page-one__github {
   text-align: center;
-  margin-right: 2rem;
   padding: 1rem 2rem;
   background-color: rgba(42, 28, 204, 0.1);
   border-radius: 8px;
   border: 1px solid rgba(42, 28, 204, 0);
   transition: 0.8s background-color, 0.8s border;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .section-four-details-page-one__github:hover {
   background-color: rgba(42, 28, 204, 0);
@@ -564,6 +569,9 @@ body {
   .section-one-details-page-two__list {
     margin-top: 100px;
   }
+  .section-two-details__title {
+    font-size: 3rem;
+  }
   .section-three-details {
     padding: 1rem 4rem 2rem 4rem;
   }
@@ -581,8 +589,11 @@ body {
     scale: 1.1;
     color: white;
   }
+  .section-four-details-page-one__title {
+    font-size: 3rem;
+  }
   .section-four-details-page-one__text {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 @media (min-width: 576px) {

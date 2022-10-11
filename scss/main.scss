@@ -52,7 +52,7 @@ body {
     }
 
     &__section-two-details--page-one-title {
-        width: 300px;
+        width: 270px;
     }
     
     &__section-three-details--page-one-title {
@@ -359,7 +359,7 @@ body {
     &__title {
         text-align: center;
         font-weight: 100;
-        font-size: 3rem;
+        font-size: 2.3rem;
         letter-spacing: 2px ;
         text-transform: uppercase;;
     }
@@ -401,6 +401,10 @@ body {
     img {
         width: 100%;
         border-radius: 8px;
+    }
+
+    a.github-address {
+        font-size:  1.8rem;
     }
 }
 
@@ -536,6 +540,10 @@ body {
 
 .section-four-details-page-one {
     
+    &__title {
+        font-size: 2.3rem;
+    }
+
     &__box {
         // height: 40%;
         width: 100%;
@@ -550,12 +558,12 @@ body {
     &__email {
         text-align: center;
         padding: 1rem 2rem;
-        margin: 10rem 2rem 10rem 0;
+        margin: 10rem 0rem 10rem 0;
         background-color: rgba(42, 28, 204, 0.1);
         border-radius: 8px;
         border: 1px solid rgba(42, 28, 204, 0);
         transition: .8s background-color, .8s border ;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
 
     }
 
@@ -575,13 +583,13 @@ body {
 
     &__github {
             text-align: center;
-            margin-right: 2rem;
+            // margin-right: rem;
             padding: 1rem 2rem;
             background-color: rgba(42, 28, 204, 0.1);
             border-radius: 8px;
             border: 1px solid rgba(42, 28, 204, 0);
             transition: .8s background-color, .8s border ;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
     }
 
     &__github:hover {
@@ -649,6 +657,12 @@ body {
         
     }
 
+    .section-two-details {
+        &__title {
+            font-size: 3rem;
+        }
+    }
+
     .section-three-details {
         padding: 1rem 4rem 2rem 4rem;
     }
@@ -675,8 +689,13 @@ body {
 
 
     .section-four-details-page-one {
+
+        &__title {
+            font-size: 3rem;
+        }
+
         &__text {
-            font-size: 2rem;
+            font-size: 2.3rem;
         }
     }
 
