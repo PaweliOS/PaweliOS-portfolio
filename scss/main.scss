@@ -134,20 +134,25 @@ body {
         
         margin-bottom: 4rem;
         text-align: center;
-        color: white;
-        border: 1px solid white;
+        // color: rgb(172, 35, 35);
+        border: 1px solid rgb(230, 230, 230);
         border-radius: 16px;
-        background-image: url('../img/temp_img.jpg');
+        background-image: url('../img/klawiatura1.jpg');
+        background-size: cover;
         transition: transform .8s, box-shadow .8s;
         font-size: 1.7rem;
         cursor: pointer;
+
+        h2 {
+            color: rgb(230, 230, 230);
+        }
 
         &--bg {
             position: absolute;
             width: 100%;
             height: 100%;
             border-radius: 16px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             z-index: -1;
         }
 
@@ -168,7 +173,7 @@ body {
         margin: 0 auto 4rem;
         z-index: 1;
         color: rgb(255, 249, 249);
-        
+        background-image: url('../img/klawiatura1.jpg');
         opacity: 1;
         animation: lightShow 2s linear;
         
@@ -184,6 +189,8 @@ body {
         // right: 5px;
         // top: 180px;
         // left: 40%;
+        background-image: url('../img/apps/Safe_Default.png');
+        background-position: center;
         color: rgb(255, 249, 249);
         
         opacity: 1;
@@ -202,6 +209,8 @@ body {
         margin: 0 auto 4rem;
             // left: 20%;
             // top: 360px;
+        background-image: url('../img/board.png');
+        background-position: center;
         z-index: 1;
         color: rgb(255, 249, 249);
         
@@ -218,6 +227,8 @@ body {
         &__contact {
         margin: 0 auto 4rem;
         // left: 40%;
+        background-image: url('../img/iphone.jpg');
+        background-position: center;
         color: rgb(255, 249, 249);
         opacity: 1;
         animation: lightShow 2s linear;
@@ -619,7 +630,7 @@ body {
     .underline {
         &__section-one-details {
             &--page-one-title, &--page-two-title, &--page-three-title, &--page-two-title {
-                width: 400px;
+                width: 300px;
             }
         }
 
@@ -647,7 +658,10 @@ body {
     .section-one-details-page-two,
     .section-one-details-page-three,
     .section-four-details-page-one  {
-        font-size: 2.5rem;
+        &__title {
+        font-size: 3rem;
+        
+        }
     }
 
     .section-one-details-page-two {
@@ -702,6 +716,18 @@ body {
 
 
 
+}
+
+@media (min-width: 492px) {
+
+    .underline {
+        &__section-one-details {
+            &--page-one-title, &--page-two-title, &--page-three-title, &--page-two-title {
+                width: 400px;
+            }
+        }
+
+    }
 }
 
 @media (min-width: 576px) {
