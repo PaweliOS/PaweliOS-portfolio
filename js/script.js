@@ -175,7 +175,7 @@ const goBack = () => {
     }
 
     if ((sectionNumber == 1) && (pageNumber == 1)) {
-        console.log('SPR: Next -> '+sectionNumber+', page: '+pageNumber)
+        console.log('SPR 1 1: Next -> '+sectionNumber+', page: '+pageNumber)
         pageTwo.classList.add('inactive')
         pageOne.classList.remove('inactive')
         backBtn.classList.add('inactive')
@@ -185,7 +185,7 @@ const goBack = () => {
     }
 
     if ((sectionNumber == 1) && (pageNumber == 2)) {
-        console.log('SPR: Next -> '+sectionNumber+', page: '+pageNumber)
+        console.log('SPR 1 2: Next -> '+sectionNumber+', page: '+pageNumber)
         pageTwo.classList.add('inactive')
         pageOne.classList.remove('inactive')
         // backBtn.classList.add('inactive')
@@ -196,14 +196,20 @@ const goBack = () => {
     }
 
     if ((sectionNumber == 1) && (pageNumber == 3)) {
-        console.log('SPR: Next -> '+sectionNumber+', page: '+pageNumber)
+        console.log('SPR 1 3: Next -> '+sectionNumber+', page: '+pageNumber)
         pageThree.classList.add('inactive')
         pageTwo.classList.remove('inactive')
         // backBtn.classList.add('inactive')
         
         pageNumber-=1
         // console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
+        pageN.textContent = pageNumber
     }
+
+    // if ((sectionNumber == 1) && (pageNumber == 4)) {
+    //     pageN.textContent = pageNumber - 1
+    //     console.log(pageNumber)
+    // }
 
 
 
@@ -300,7 +306,7 @@ const goNext = () => {
 
     if ((sectionNumber == 3) && (pageNumber == 1)) {
         pageOneSectionThree.classList.add('inactive')
-        pageTwoSectionThree.classList.remove('inactive')
+        // pageTwoSectionThree.classList.remove('inactive')
          
         nextBtn.classList.add('inactive')
         // pageNumber -=1
@@ -313,6 +319,7 @@ const goNext = () => {
     // console.log(pageNumber)
     pageN.textContent = pageNumber
 
+    // pageNumber == 4 ? pageNumber = 3 : null;
 }
 
 
