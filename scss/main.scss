@@ -5,16 +5,6 @@
     height: $individualHeight;
 }
 
-// @mixin forUnderline($individualWidth) {
-//     width: $individualWidth;
-//     position: relative;
-//     height: 1px;
-//     background-color: white;
-//     align-items: center;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     margin-top: 4px;
-// }
 *, 
 *::after, 
 *::before {
@@ -26,14 +16,12 @@
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
-    
 }
 
 body {
     position: relative;
     font-family: 'Jura', sans-serif;
     height: 100vh;
-    
 }
 
 .underline {
@@ -69,8 +57,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-
-    
 }
 
 .header {
@@ -81,32 +67,17 @@ body {
     &__title {
         text-align: center;
         color: rgb(251, 251, 251);
-        // color: rebeccapurple;
         font-size: 2.8rem;
         font-weight: 100;
         z-index: 11;
     }
 }
 
-
-// .inactive {
-//     display: none;
-// }
-
-// .backgroundHidding {
-//     color: red;
-// }
-
 .main {
     position: relative;
     background: linear-gradient(45deg, #13046F,black);
-    // height: 200vh;
+
     &__data {
-        // position: relative;
-        // position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
         width: 100%;
         height: 100%;
         padding: 100px 10px 20px 10px;
@@ -127,14 +98,10 @@ body {
  
     &__items {
         position: relative;
-        // display: block;
         width: 250px;
-        // margin-bottom: 4rem;
         height: 50px;
-        
         margin-bottom: 4rem;
         text-align: center;
-        // color: rgb(172, 35, 35);
         border: 1px solid rgb(230, 230, 230);
         border-radius: 16px;
         background-image: url('../img/klawiatura1.jpg');
@@ -155,21 +122,14 @@ body {
             background-color: rgba(0, 0, 0, 0.8);
             z-index: -1;
         }
-
     }
 
     &__items:hover {
         transform: scale(1.1);
         box-shadow: 0 5px 20px white;
-        
-        // transform: rotateY(30deg) rotateZ(-2deg) ;
-       
     }
 
     &__programming {
-        // margin: auto;
-        // margin-bottom: 4rem;
-        // transform: translateX(50%, -70%);
         margin: 0 auto 4rem;
         z-index: 1;
         color: rgb(255, 249, 249);
@@ -177,8 +137,7 @@ body {
         opacity: 1;
         animation: lightShow 2s linear;
         
-        &--title-two {
-         
+        &--title-two {         
          font-weight: 100;
         line-height: 45px;
         }
@@ -186,20 +145,14 @@ body {
 
     &__photos {
         margin: 0 auto 4rem;
-        // right: 5px;
-        // top: 180px;
-        // left: 40%;
         background-image: url('../img/apps/Safe_Default.png');
         background-position: center;
-        color: rgb(255, 249, 249);
-        
+        color: rgb(255, 249, 249);       
         opacity: 1;
         animation: lightShow 2s linear;
         z-index: 1;
-        
-        
+          
         &--title-two {
-         
          font-weight: 100;
         line-height: 45px;
         }
@@ -207,26 +160,20 @@ body {
 
     &__about {
         margin: 0 auto 4rem;
-            // left: 20%;
-            // top: 360px;
         background-image: url('../img/board.png');
         background-position: center;
         z-index: 1;
-        color: rgb(255, 249, 249);
-        
+        color: rgb(255, 249, 249);       
         opacity: 1;
-        animation: lightShow 2s linear;
-        
+        animation: lightShow 2s linear;       
         &--title-two {
-         
         font-weight: 100;
         line-height: 45px;
         }
     }
 
-        &__contact {
-        margin: 0 auto 4rem;
-        // left: 40%;
+    &__contact {
+        margin: 0 auto 4rem; 
         background-image: url('../img/iphone.jpg');
         background-position: center;
         color: rgb(255, 249, 249);
@@ -238,7 +185,6 @@ body {
         line-height: 45px;
         }
     }
-
 }
 
 .github-address {
@@ -271,10 +217,7 @@ body {
     margin-top: 3rem;
 }
 
-
-
 .section-one-details, .section-two-details, .section-three-details, .section-four-details {
-    // position: relative;
     width: 100%;
     height: 67vh;
     padding: 1rem 4rem 2rem 4rem;
@@ -288,8 +231,6 @@ body {
 .section-three-details {
     padding: 1rem 2rem 2rem 0;
 }
-
-
 
 .section-one-details-page-one,
 .section-one-details-page-two,
@@ -329,8 +270,6 @@ body {
     .project-details{
         animation: projectAppearing 2s linear 4s forwards;
     }
-
-
 }
 
 .section-one-details-page-one, .section-one-details-page-three {
@@ -345,15 +284,10 @@ body {
     p {
         font-size: 1.9rem;
     }
-
 }
 
-
-
 .section-two-details  {
-    // display: none;
     position: relative;
-    // @include sectionHeight(720px);
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 15px rgb(14, 34, 164);
     padding: 20px 40px 40px;
@@ -368,19 +302,10 @@ body {
 
     &__fence {
         position: relative;
-        // overflow: hidden;
         margin-top: 120px;
         height: 500px;
     }
-    // &__grid {
-    //     display: grid;
-    //     position: relative;
-    //     top: -100px;
-    //     grid-template-columns: auto auto auto auto;
-    //     margin-top: 3rem;
-    //     gap: 3rem;
-    //     animation: galeryMove 30s infinite linear;
-    // }
+
     &__grid {
         display: grid;
         position: relative;
@@ -388,7 +313,6 @@ body {
         grid-template-columns: auto;
         margin-top: 3rem;
         gap: 3rem;
-        // animation: galeryMove 120s infinite linear;
     }
 
     &__pics {
@@ -396,10 +320,8 @@ body {
         flex-direction: column;
         justify-content: center;
         background-color: rgba(42, 28, 204, 0.1);
-        
-        // overflow: hidden;
-        
     }
+
     img {
         width: 100%;
         border-radius: 8px;
@@ -413,12 +335,11 @@ body {
 .page {
     position: relative;
     width: 3rem;
-    // text-align: center;
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 1rem;
-    // margin-top: 2rem;
+
     &__number {
         color: white;
         font-size: 2rem;
@@ -427,19 +348,13 @@ body {
 
 .move-btns {
     position: relative;
-    // text-align: center;
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 1rem;
-    // display: none;
-    // justify-content: space-between;
-//    bottom: 2rem;
 
     &__btns {
         position: relative;
-        // display: flex;
-        // margin-left: 40px;
         background: none;
         border: none;
         color: white;
@@ -459,7 +374,6 @@ body {
         left: 0px;
         background-color: rgb(237, 16, 16);
         animation: next 5s infinite linear;
-
     }
 
     &__btns:hover {
@@ -474,11 +388,6 @@ body {
 
 .section-three-details-page-one {
     
-    // @include sectionHeight(740px);
-    // padding-right: 2rem;
-    // padding-bottom: 2rem;
-
-    
         &__title {
                 text-align: center;
                 font-weight: 100;
@@ -487,13 +396,10 @@ body {
                 letter-spacing: 2px;
         }
 
-
     &__intro {
         margin: 2rem;
         font-size: 2.2rem;
     }
-
-
 
     &__text {
         transition: scale .6s, color .6s;
@@ -504,17 +410,9 @@ body {
         font-weight: 100;
         line-height: 2.6rem;
         text-align: justify;
-
-
     }
 
-        // &__text:hover {
-        //     scale: (1.1);
-        //     color: white;
-        
-    // }
-
-        a.github-address {
+    a.github-address {
         margin-bottom: 2rem;
         color: rgb(177, 176, 176);
     }
@@ -528,16 +426,13 @@ body {
             margin-right: 2rem;
     }
     &__text-four {
-        // margin-right: 4rem;
         margin-left: 0;
         margin-top: 2rem;
     }
     &__text-five {
-        // margin-right: 2rem;
         margin-left: 0;
         margin-top: 2rem;
     }
-
 }
 
 .section-four-details-page-one {
@@ -547,15 +442,11 @@ body {
     }
 
     &__box {
-        // height: 40%;
         width: 100%;
         display: inline-flex;
         flex-direction: column;
         align-items: center;
-        
-        // height: 100%;
     }
-
 
     &__email {
         text-align: center;
@@ -566,7 +457,6 @@ body {
         border: 1px solid rgba(42, 28, 204, 0);
         transition: .8s background-color, .8s border ;
         font-size: 1.5rem;
-
     }
 
     &__email:hover {
@@ -574,18 +464,14 @@ body {
         border: 1px solid rgb(15, 4, 133);
     }
 
- 
-
     &__text {
         color: white;
         text-decoration: none;
         font-weight: 100;
     }
 
-
     &__github {
             text-align: center;
-            // margin-right: rem;
             padding: 1rem 2rem;
             background-color: rgba(42, 28, 204, 0.1);
             border-radius: 8px;
@@ -600,8 +486,6 @@ body {
     }
 }
 
-
-
 .footer {
     position: relative;
     width: 100%;
@@ -612,9 +496,10 @@ body {
     font-size: 2rem;
     text-align: center;
     background: linear-gradient(45deg, #13046F,rgb(2, 4, 55));
-
 }
 
+
+// +++++++++++++ MEDIA QUERIES +++++++++++++ //
 
 @media (min-width: 450px) {
 
@@ -624,7 +509,6 @@ body {
                 width: 300px;
             }
         }
-
     }
 
     .header {
@@ -634,10 +518,9 @@ body {
     .main {
         &_data {
             position: relative;
-        padding: 130px 10px 40px 10px;
+            padding: 130px 10px 40px 10px;
         }
     }
-
 
     .section-one-details-page-one, .section-one-details-page-three {
         &__list {
@@ -651,7 +534,6 @@ body {
     .section-four-details-page-one  {
         &__title {
         font-size: 3rem;
-        
         }
     }
 
@@ -659,7 +541,6 @@ body {
         &__list {
             margin-top: 100px;
         }
-        
     }
 
     .section-two-details {
@@ -672,8 +553,6 @@ body {
         padding: 1rem 4rem 2rem 4rem;
     }
 
-   
-
     .section-three-details-page-one {
         padding-right: 2rem;
 
@@ -685,13 +564,11 @@ body {
             font-size: 3rem;
         }
 
-
         &__text:hover {
             scale: (1.1);
             color: white;
         }
     }
-
 
     .section-four-details-page-one {
 
@@ -703,21 +580,15 @@ body {
             font-size: 2.3rem;
         }
     }
-
-
-
-
 }
 
 @media (min-width: 492px) {
-
     .underline {
         &__section-one-details {
             &--page-one-title, &--page-two-title, &--page-three-title, &--page-two-title {
                 width: 400px;
             }
         }
-
     }
 }
 
@@ -732,9 +603,7 @@ body {
     .main {
 
         &__data {
-           
             padding: 180px 40px 40px 40px;
-           
         }
         &__person-img {
             display: none;
@@ -748,20 +617,15 @@ body {
             font-size: 1.7rem;
         }
 
-
         &__programming {
-            // left: 15%;
             margin: 0 auto 4rem 15%;
-            
             &--title-two {
-             
-             font-weight: 100;
-            line-height: 45px;
+                font-weight: 100;
+                line-height: 45px;
             }
         }
 
         &__photos {
-            // left: 40%;
             margin: 0 auto 4rem 40%;
             &--title-two {
              font-weight: 100;
@@ -788,7 +652,6 @@ body {
     .section-two-details {
         &__grid {
             grid-template-columns: auto auto;
-            // animation: galeryMove 90s infinite linear;
         }
     }
 
@@ -801,7 +664,6 @@ body {
         &__github {
             align-self: flex-end;
         }
-
     }
 }
 
@@ -809,7 +671,6 @@ body {
     .section-two-details {
         &__grid {
             grid-template-columns: auto auto auto;
-            // animation: galeryMove 90s infinite linear;
         }
     }
 }
@@ -822,13 +683,10 @@ body {
         }
     }
 
-
     .main {
 
         &__data {
-           
             padding: 180px 40px 40px 300px;
-           
         }
         &__person-img {
             display: block;
@@ -842,19 +700,15 @@ body {
             font-size: 3rem;
         }
 
-
         &__programming {
-            // left: 0;
             margin: 0 auto 4rem 0;
             &--title-two {
-             
-             font-weight: 100;
-            line-height: 140px;
+                font-weight: 100;
+                line-height: 140px;
             }
         }
 
         &__photos {
-            // left: 20%;
             margin: 0 auto 4rem 20%;
             &--title-two {
              font-weight: 100;
@@ -875,17 +729,13 @@ body {
             line-height: 140px;
             }
         }
-
     }
 
     .section-two-details {
         &__grid {
             grid-template-columns: auto auto auto auto;
-            // animation: galeryMove 30s infinite linear;
         }
     }
-
-
 }
 
 

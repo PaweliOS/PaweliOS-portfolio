@@ -1,7 +1,6 @@
 const sections = document.querySelectorAll('.sections')
 const programmingBtn = document.querySelector('.section-one__programming-btn')
 const photosBtn = document.querySelector('.section-two__photos-btn')
-// const hobbyBtn = document.querySelector('.section-three__hobby-btn')
 const aboutBtn = document.querySelector('.section-three__about-btn')
 const contactBtn = document.querySelector('.sections-four__contact-btn')
 
@@ -22,10 +21,10 @@ const pageThree = document.querySelector('.section-one-details-page-three')
 const sectionTwo = document.querySelector('.section-two')
 const sectionTwoDetails = document.querySelector('.section-two-details')
 const pageOneSectionTwo = document.querySelector('.section-two-details-page-one')
+
 const sectionThree = document.querySelector('.section-three')
 const sectionThreeDetails = document.querySelector('.section-three-details')
 const pageOneSectionThree = document.querySelector('.section-three-details-page-one')
-
 
 const sectionFour = document.querySelector('.section-four')
 const sectionFourDetails = document.querySelector('.section-four-details')
@@ -35,8 +34,6 @@ const pageOneSectionFour = document.querySelector('.section-four-details-page-on
 const sectionGallery = document.querySelector('.section-gallery')
 
 const linkTextEmail = document.querySelector('.section-four-details-page-one__text-email')
-
-const linkEmail = document.querySelector('.section-four-details-page-one__text-email')
 
 const emailPlace = document.querySelector('.section-four-details-page-one__email')
 const emailAddress = document.createElement('a')
@@ -80,16 +77,12 @@ const goToSectionOneDetails = () => {
     }
 
     pageNumber += 1
-    // pageN.textContent = pageNumber
     console.log('Next -> ' + sectionNumber + ', page: ' + pageNumber)
     pageN.textContent = pageNumber
 }
 
 
-
-
 // section Two
-
 const goToSectionTwoDetails = () => {
     sectionNumber = 2
     pageNumber = 0
@@ -100,9 +93,6 @@ const goToSectionTwoDetails = () => {
     sectionTwoDetails.classList.remove('inactive')
     pageOneSectionTwo.classList.remove('inactive')
 
-    // if (pageNumber == 0) {
-    //     backBtn.classList.add('inactive')
-    // }
     pageNumber == 0 ? backBtn.classList.add('inactive') : null
 
     mainBtn.classList.contains('inactive') ?
@@ -112,16 +102,11 @@ const goToSectionTwoDetails = () => {
     
     pageBox.classList.remove('inactive')
     pageN.classList.remove('inactive')
-    // if (mainBtn.classList.contains('inactive')) {
-    //     mainBtn.classList.remove('inactive')
-    // }
-    
 }
 
 const goToSectionThree = () => {
     sectionNumber = 3
     pageNumber = 0
-    // photosBtn.classList.add('inactive')
     sectionOne.classList.add('inactive')
     sectionTwo.classList.add('inactive')
     sectionThree.classList.add('inactive')
@@ -129,20 +114,17 @@ const goToSectionThree = () => {
     sectionThreeDetails.classList.remove('inactive')
     pageOneSectionThree.classList.remove('inactive')
 
-
     pageNumber == 0 ? (backBtn.classList.add('inactive'), nextBtn.classList.add('inactive')) : null
 
     mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')) : null
     
     pageBox.classList.remove('inactive')
     pageN.classList.remove('inactive')
-    
 }
 
 const goToSectionFour = () => {
     sectionNumber = 4
     pageNumber = 0
-    // photosBtn.classList.add('inactive')
     sectionOne.classList.add('inactive')
     sectionTwo.classList.add('inactive')
     sectionThree.classList.add('inactive')
@@ -150,13 +132,11 @@ const goToSectionFour = () => {
     sectionFourDetails.classList.remove('inactive')
     pageOneSectionFour.classList.remove('inactive')
 
-
     pageNumber == 0 ? (backBtn.classList.add('inactive'), nextBtn.classList.add('inactive')) : null
     mainBtn.classList.contains('inactive') ? (mainBtn.classList.remove('inactive'), moveBox.classList.remove('inactive')) : null
 
     pageBox.classList.remove('inactive')
     pageN.classList.remove('inactive')
-    
 }
 
 
@@ -168,9 +148,6 @@ const goBack = () => {
         sectionFour.classList.remove('inactive')
         sectionOneDetails.classList.add('inactive')
         pageOne.classList.add('inactive')
-        // sectionNumber = 1
-        // pageNumber -= 1
-        
         console.log('Robie 1 i 1 Next -> '+sectionNumber+', page: '+pageNumber)
     }
 
@@ -179,8 +156,6 @@ const goBack = () => {
         pageTwo.classList.add('inactive')
         pageOne.classList.remove('inactive')
         backBtn.classList.add('inactive')
-        // sectionNumber = 1
-        // pageNumber-=1
         console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
     }
 
@@ -188,36 +163,20 @@ const goBack = () => {
         console.log('SPR 1 2: Next -> '+sectionNumber+', page: '+pageNumber)
         pageTwo.classList.add('inactive')
         pageOne.classList.remove('inactive')
-        // backBtn.classList.add('inactive')
-        // sectionNumber = 1
         pageNumber -= 1
         pageN.textContent = pageNumber
-        // console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
     }
 
     if ((sectionNumber == 1) && (pageNumber == 3)) {
         console.log('SPR 1 3: Next -> '+sectionNumber+', page: '+pageNumber)
         pageThree.classList.add('inactive')
         pageTwo.classList.remove('inactive')
-        // backBtn.classList.add('inactive')
         
         pageNumber-=1
-        // console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
         pageN.textContent = pageNumber
     }
-
-    // if ((sectionNumber == 1) && (pageNumber == 4)) {
-    //     pageN.textContent = pageNumber - 1
-    //     console.log(pageNumber)
-    // }
-
-
-
-
-    // pageNumber-=1
-
-
 }
+
 const goMain = () => {
 
     if (sectionNumber == 1) {
@@ -254,7 +213,6 @@ const goMain = () => {
         sectionThreeDetails.classList.add('inactive')
         pageOneSectionThree.classList.add('inactive')
         
-    
         sectionNumber = 3
         pageNumber = 0
     }
@@ -267,7 +225,6 @@ const goMain = () => {
         sectionFourDetails.classList.add('inactive')
         pageOneSectionFour.classList.add('inactive')
         
-    
         sectionNumber = 3
         pageNumber = 0
     }
@@ -281,13 +238,9 @@ const goMain = () => {
 
     pageNumber = 0;
     pageN.textContent = pageNumber+1
-
 }
 
-
 const goNext = () => {
-    // sectionNumber = 1
-    // pageNumber += 1
     console.log('Next -> '+sectionNumber+', page: '+pageNumber)
     backBtn.classList.remove('inactive')
    
@@ -300,48 +253,24 @@ const goNext = () => {
         pageTwo.classList.add('inactive')
         pageThree.classList.remove('inactive') 
         nextBtn.classList.add('inactive')
-        // pageNumber -=1
     }
-// sectionNumber == 2 nie istnieje
 
     if ((sectionNumber == 3) && (pageNumber == 1)) {
         pageOneSectionThree.classList.add('inactive')
-        // pageTwoSectionThree.classList.remove('inactive')
-         
         nextBtn.classList.add('inactive')
-        // pageNumber -=1
     }
-
-
 
     sectionNumber = 1
     pageNumber += 1
-    // console.log(pageNumber)
     pageN.textContent = pageNumber
-
-    // pageNumber == 4 ? pageNumber = 3 : null;
 }
-
-
 
 const setListenerForMain = () => {
     mainsBtns.forEach((btn) => {
         btn.addEventListener('click', goMain)
         
     })
-// const goMain = () => {
-//     mainsBtns.forEach((btn) => {
-//         btn.addEventListener('click', goMain)
-        
-//     })
-
-    
-    
 }
-
-// const hideBackgroundParent = () => {
-//     linkTextEmail.closest('.section-four-details-page-one__email').classList.add('backgroundHidding')
-// }
 
 const fillEmail = () => {
     let emailCoded = atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
@@ -350,13 +279,9 @@ const fillEmail = () => {
     emailAddress.style.textDecoration = 'none'
     emailAddress.style.color = 'white'
     emailAddress.style.fontWeight = '100'
-    // emailAddress.style.fontSize = '1.5rem'
     emailAddress.classList.add('section-four-details-page-one__text')
     emailAddress.classList.add('section-four-details-page-one__text-email')
     emailPlace.append(emailAddress)
-    // linkEmail.outerHTML = 'class=" section-four-details-page-one__text section-four-details-page-one__text-email" href="mailto:mirrorpawel.pabisiak@gmail.com"'
-	// linkEmail.innerHTML ='<i class="fa-regular fa-envelope"></i> '+ emailCoded
-	// linkEmail.innerHTML = '<i class="fa-regular fa-envelope"></i> '+ atob('bWlycm9ycGF3ZWwucGFiaXNpYWtAZ21haWwuY29t')
 }
 
 const setFirstView = () => {
@@ -369,24 +294,15 @@ const setFirstView = () => {
     
 }
 
-
-
 fillEmail();
 setFirstView();
-
-
 
 programmingBtn.addEventListener('click', goToSectionOneDetails);
 backBtn.addEventListener('click', goBack)
 mainBtn.addEventListener('click', goMain)
 nextBtn.addEventListener('click', goNext)
 
-// ustawiam listenera na wszytskie guziki main: - już nie potrzebne jest teraz jeden Main
 // document.addEventListener('DOMContentLoaded', setListenerForMain)
 photosBtn.addEventListener('click', goToSectionTwoDetails)
 aboutBtn.addEventListener('click', goToSectionThree)
 contactBtn.addEventListener('click', goToSectionFour)
-   
-// aboutBtn.addEventListener('click', goToSectionAbout);
-
-// linkTextEmail.addEventListener('click', hideBackgroundParent)
