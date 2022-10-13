@@ -256,19 +256,21 @@ body {
 
     &__item {
         margin-left: -200%;
+        margin-right: 200%;
+
     }
     &__item:nth-child(1) {
         animation: liMove 2s ease-out forwards;
     }
     &__item:nth-child(2) {
-        animation: liMove 2s 2s ease-out forwards;
+        animation: liMove 2s .5s ease-out forwards;
     }
 
     .project-details {
         opacity: 0;
     }
     .project-details{
-        animation: projectAppearing 2s linear 4s forwards;
+        animation: projectAppearing 2s linear 2s forwards;
     }
 }
 
@@ -539,7 +541,7 @@ body {
 
     .section-one-details-page-two {
         &__list {
-            margin-top: 100px;
+            margin-top: 50px;
         }
     }
 

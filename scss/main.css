@@ -122,17 +122,21 @@
 @-webkit-keyframes liMove {
   from {
     margin-left: -200%;
+    margin-right: 200%;
   }
   to {
     margin-left: 0;
+    margin-right: 0;
   }
 }
 @keyframes liMove {
   from {
     margin-left: -200%;
+    margin-right: 200%;
   }
   to {
     margin-left: 0;
+    margin-right: 0;
   }
 }
 @-webkit-keyframes projectAppearing {
@@ -393,6 +397,7 @@ body {
 .section-one-details-page-three__item,
 .section-four-details-page-one__item {
   margin-left: -200%;
+  margin-right: 200%;
 }
 .section-one-details-page-one__item:nth-child(1),
 .section-one-details-page-two__item:nth-child(1),
@@ -405,8 +410,8 @@ body {
 .section-one-details-page-two__item:nth-child(2),
 .section-one-details-page-three__item:nth-child(2),
 .section-four-details-page-one__item:nth-child(2) {
-  -webkit-animation: liMove 2s 2s ease-out forwards;
-          animation: liMove 2s 2s ease-out forwards;
+  -webkit-animation: liMove 2s 0.5s ease-out forwards;
+          animation: liMove 2s 0.5s ease-out forwards;
 }
 .section-one-details-page-one .project-details,
 .section-one-details-page-two .project-details,
@@ -418,8 +423,8 @@ body {
 .section-one-details-page-two .project-details,
 .section-one-details-page-three .project-details,
 .section-four-details-page-one .project-details {
-  -webkit-animation: projectAppearing 2s linear 4s forwards;
-          animation: projectAppearing 2s linear 4s forwards;
+  -webkit-animation: projectAppearing 2s linear 2s forwards;
+          animation: projectAppearing 2s linear 2s forwards;
 }
 
 .section-one-details-page-one__list, .section-one-details-page-three__list {
@@ -638,7 +643,7 @@ body {
     font-size: 3rem;
   }
   .section-one-details-page-two__list {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .section-two-details__title {
     font-size: 3rem;

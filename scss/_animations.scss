@@ -60,9 +60,11 @@
 @keyframes liMove {
     from {
         margin-left: -200%;
+        margin-right: 200%;
     }
     to {
         margin-left: 0;
+        margin-right: 0;
     }
 }
 
