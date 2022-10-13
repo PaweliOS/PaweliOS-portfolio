@@ -705,8 +705,8 @@ body {
 
     .sections {
          &__items {
-            width: 75%;
-            height: 140px;
+            width: 65%;
+            height: 120px;
             font-size: 3rem;
         }
 
@@ -714,7 +714,7 @@ body {
             margin: 0 auto 4rem 0;
             &--title-two {
                 font-weight: 100;
-                line-height: 140px;
+                line-height: 120px;
             }
         }
 
@@ -722,21 +722,21 @@ body {
             margin: 0 auto 4rem 20%;
             &--title-two {
              font-weight: 100;
-            line-height: 140px;
+            line-height: 120px;
             }
         }
         &__about {
             margin: 0 auto 4rem 0;
             &--title-two {
              font-weight: 100;
-            line-height: 140px;
+            line-height: 120px;
             }
         }
         &__contact {
             margin: 0 auto 4rem 20%;
             &--title-two {
              font-weight: 100;
-            line-height: 140px;
+            line-height: 120px;
             }
         }
     }
