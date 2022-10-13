@@ -196,6 +196,10 @@ body {
   width: 140px;
 }
 
+.bigLetter {
+  text-transform: capitalize;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1200px;
@@ -259,7 +263,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
 .sections__items:hover {
@@ -278,6 +282,7 @@ body {
 .sections__programming--title-two {
   font-weight: 100;
   line-height: 45px;
+  text-transform: capitalize;
 }
 .sections__photos {
   margin: 0 auto 4rem;
@@ -292,6 +297,7 @@ body {
 .sections__photos--title-two {
   font-weight: 100;
   line-height: 45px;
+  text-transform: capitalize;
 }
 .sections__about {
   margin: 0 auto 4rem;
@@ -320,6 +326,7 @@ body {
 .sections__contact--title-two {
   font-weight: 100;
   line-height: 45px;
+  text-transform: capitalize;
 }
 
 .github-address {
