@@ -49,6 +49,7 @@ let pageNumber
 const goToSectionOneDetails = () => {
     sectionNumber = 1
     pageNumber = 0
+    console.log('jestem w s1')
     programmingBtn.classList.add('inactive')
     sectionTwo.classList.add('inactive')
     sectionThree.classList.add('inactive')
@@ -58,6 +59,8 @@ const goToSectionOneDetails = () => {
     
     if (pageNumber == 0) {
         backBtn.classList.add('inactive')
+        moveBox.classList.add('inactive')
+        console.log('pageNumber=0')
     }
 
     if (nextBtn.classList.contains('inactive')) {
@@ -68,7 +71,7 @@ const goToSectionOneDetails = () => {
     }
     if (moveBox.classList.contains('inactive') && pageBox.classList.contains('inactive')) {
         moveBox.classList.remove('inactive')
-        backBtn.classList.remove('inactive')
+        // backBtn.classList.remove('inactive')
         mainBtn.classList.remove('inactive')
         nextBtn.classList.remove('inactive')
         
@@ -156,7 +159,9 @@ const goBack = () => {
         pageTwo.classList.add('inactive')
         pageOne.classList.remove('inactive')
         backBtn.classList.add('inactive')
-        console.log('Robie 1 i 2 Next -> '+sectionNumber+', page: '+pageNumber)
+        console.log('Robie 1 i 2 Next -> ' + sectionNumber + ', page: ' + pageNumber)
+        
+
     }
 
     if ((sectionNumber == 1) && (pageNumber == 2)) {
@@ -165,6 +170,7 @@ const goBack = () => {
         pageOne.classList.remove('inactive')
         pageNumber -= 1
         pageN.textContent = pageNumber
+        backBtn.classList.add('inactive')
     }
 
     if ((sectionNumber == 1) && (pageNumber == 3)) {
