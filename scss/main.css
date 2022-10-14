@@ -247,10 +247,10 @@ body {
   height: 50px;
   margin-bottom: 4rem;
   text-align: center;
+  background-size: cover;
+  background-position: center;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 16px;
-  background-image: url("../img/klawiatura1.jpg");
-  background-size: cover;
   transition: transform 0.8s, box-shadow 0.8s;
   font-size: 1.7rem;
   cursor: pointer;
@@ -274,40 +274,39 @@ body {
   margin: 0 auto 4rem;
   z-index: 1;
   color: rgb(255, 249, 249);
-  background-image: url("../img/klawiatura1.jpg");
   opacity: 1;
   -webkit-animation: lightShow 2s linear;
           animation: lightShow 2s linear;
+  background-image: url("../img/klawiatura1.jpg");
 }
 .sections__programming--title-two {
   font-weight: 100;
   line-height: 45px;
+}
+.sections__programming--title-two {
   text-transform: capitalize;
 }
 .sections__photos {
   margin: 0 auto 4rem;
-  background-image: url("../img/apps/Safe_Default.png");
-  background-position: center;
+  z-index: 1;
   color: rgb(255, 249, 249);
   opacity: 1;
   -webkit-animation: lightShow 2s linear;
           animation: lightShow 2s linear;
-  z-index: 1;
+  background-image: url("../img/apps/Safe_Default.png");
 }
 .sections__photos--title-two {
   font-weight: 100;
   line-height: 45px;
-  text-transform: capitalize;
 }
 .sections__about {
   margin: 0 auto 4rem;
-  background-image: url("../img/board.png");
-  background-position: center;
   z-index: 1;
   color: rgb(255, 249, 249);
   opacity: 1;
   -webkit-animation: lightShow 2s linear;
           animation: lightShow 2s linear;
+  background-image: url("../img/board.png");
 }
 .sections__about--title-two {
   font-weight: 100;
@@ -315,17 +314,18 @@ body {
 }
 .sections__contact {
   margin: 0 auto 4rem;
-  background-image: url("../img/iphone.jpg");
-  background-position: center;
+  z-index: 1;
   color: rgb(255, 249, 249);
   opacity: 1;
   -webkit-animation: lightShow 2s linear;
           animation: lightShow 2s linear;
-  z-index: 1;
+  background-image: url("../img/iphone.jpg");
 }
 .sections__contact--title-two {
   font-weight: 100;
   line-height: 45px;
+}
+.sections__contact--title-two {
   text-transform: capitalize;
 }
 
@@ -455,8 +455,8 @@ body {
   text-align: center;
   font-weight: 100;
   font-size: 2.3rem;
-  letter-spacing: 2px;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .section-two-details__fence {
   position: relative;
@@ -640,14 +640,14 @@ body {
     position: relative;
     padding: 130px 10px 40px 10px;
   }
-  .section-one-details-page-one__list, .section-one-details-page-three__list {
-    margin-top: 120px;
-  }
   .section-one-details-page-one__title,
 .section-one-details-page-two__title,
 .section-one-details-page-three__title,
 .section-four-details-page-one__title {
     font-size: 3rem;
+  }
+  .section-one-details-page-one__list, .section-one-details-page-three__list {
+    margin-top: 120px;
   }
   .section-one-details-page-two__list {
     margin-top: 50px;
@@ -706,10 +706,10 @@ body {
     font-weight: 100;
     line-height: 45px;
   }
-  .sections__photos {
+  .sections__photos, .sections__contact {
     margin: 0 auto 4rem 40%;
   }
-  .sections__photos--title-two {
+  .sections__photos--title-two, .sections__contact--title-two {
     font-weight: 100;
     line-height: 45px;
   }
@@ -717,13 +717,6 @@ body {
     margin: 0 auto 4rem 15%;
   }
   .sections__about--title-two {
-    font-weight: 100;
-    line-height: 45px;
-  }
-  .sections__contact {
-    margin: 0 auto 4rem 40%;
-  }
-  .sections__contact--title-two {
     font-weight: 100;
     line-height: 45px;
   }
@@ -757,31 +750,17 @@ body {
     height: 120px;
     font-size: 3rem;
   }
-  .sections__programming {
+  .sections__programming, .sections__about {
     margin: 0 auto 4rem 0;
   }
-  .sections__programming--title-two {
+  .sections__programming--title-two, .sections__about--title-two {
     font-weight: 100;
     line-height: 120px;
   }
-  .sections__photos {
+  .sections__photos, .sections__contact {
     margin: 0 auto 4rem 20%;
   }
-  .sections__photos--title-two {
-    font-weight: 100;
-    line-height: 120px;
-  }
-  .sections__about {
-    margin: 0 auto 4rem 0;
-  }
-  .sections__about--title-two {
-    font-weight: 100;
-    line-height: 120px;
-  }
-  .sections__contact {
-    margin: 0 auto 4rem 20%;
-  }
-  .sections__contact--title-two {
+  .sections__photos--title-two, .sections__contact--title-two {
     font-weight: 100;
     line-height: 120px;
   }

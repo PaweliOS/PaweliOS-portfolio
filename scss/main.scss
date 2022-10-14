@@ -5,6 +5,28 @@
     height: $individualHeight;
 }
 
+@mixin sectionsFourButtonsSettings {
+    margin: 0 auto 4rem;
+    z-index: 1;
+    color: rgb(255, 249, 249);
+    opacity: 1;
+    animation: lightShow 2s linear;
+    &--title-two {         
+    font-weight: 100;
+    line-height: 45px;
+    }
+}
+
+@mixin sectionOnePagesTitleSetting {
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
 *, 
 *::after, 
 *::before {
@@ -99,17 +121,16 @@ body {
 // sekcje guzików: programowanie, obrazy, o mnie, kontakt
 .sections {
     position: relative;
- 
     &__items {
         position: relative;
         width: 250px;
         height: 50px;
         margin-bottom: 4rem;
         text-align: center;
+        background-size: cover;
+        background-position: center;
         border: 1px solid rgb(230, 230, 230);
         border-radius: 16px;
-        background-image: url('../img/klawiatura1.jpg');
-        background-size: cover;
         transition: transform .8s, box-shadow .8s;
         font-size: 1.7rem;
         cursor: pointer;
@@ -124,6 +145,8 @@ body {
             height: 100%;
             border-radius: 16px;
             background-color: rgba(0, 0, 0, 0.7);
+            // background-size: cover;
+            // background-position: center;
             z-index: -1;
         }
     }
@@ -134,63 +157,28 @@ body {
     }
 
     &__programming {
-        margin: 0 auto 4rem;
-        z-index: 1;
-        color: rgb(255, 249, 249);
+        @include sectionsFourButtonsSettings();
         background-image: url('../img/klawiatura1.jpg');
-        opacity: 1;
-        animation: lightShow 2s linear;
-        
-        &--title-two {         
-         font-weight: 100;
-        line-height: 45px;
-        text-transform: capitalize;
+        &--title-two {
+            text-transform: capitalize;
         }
-        
     }
 
     &__photos {
-        margin: 0 auto 4rem;
+        @include sectionsFourButtonsSettings();
         background-image: url('../img/apps/Safe_Default.png');
-        background-position: center;
-        color: rgb(255, 249, 249);       
-        opacity: 1;
-        animation: lightShow 2s linear;
-        z-index: 1;
-          
-        &--title-two {
-         font-weight: 100;
-        line-height: 45px;
-        text-transform: capitalize;
-        }
     }
 
     &__about {
-        margin: 0 auto 4rem;
+        @include sectionsFourButtonsSettings();
         background-image: url('../img/board.png');
-        background-position: center;
-        z-index: 1;
-        color: rgb(255, 249, 249);       
-        opacity: 1;
-        animation: lightShow 2s linear;       
-        &--title-two {
-        font-weight: 100;
-        line-height: 45px;
-        }
     }
 
     &__contact {
-        margin: 0 auto 4rem; 
+        @include sectionsFourButtonsSettings(); 
         background-image: url('../img/iphone.jpg');
-        background-position: center;
-        color: rgb(255, 249, 249);
-        opacity: 1;
-        animation: lightShow 2s linear;
-        z-index: 1;
         &--title-two {
-         font-weight: 100;
-        line-height: 45px;
-        text-transform: capitalize;
+            text-transform: capitalize;
         }
     }
 }
@@ -249,11 +237,7 @@ body {
     height: 100%;
 
     &__title {
-        text-align: center;
-        font-weight: 100;
-        font-size: 2.3rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        @include sectionOnePagesTitleSetting();
     }
 
     &__list {
@@ -301,13 +285,9 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 15px rgb(14, 34, 164);
     padding: 20px 40px 40px;
- 
+
     &__title {
-        text-align: center;
-        font-weight: 100;
-        font-size: 2.3rem;
-        letter-spacing: 2px ;
-        text-transform: uppercase;;
+        @include sectionOnePagesTitleSetting();
     }
 
     &__fence {
@@ -399,11 +379,7 @@ body {
 .section-three-details-page-one {
     
         &__title {
-                text-align: center;
-                font-weight: 100;
-                font-size: 2.3rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
+            @include sectionOnePagesTitleSetting();
         }
 
     &__intro {
@@ -532,11 +508,6 @@ body {
         }
     }
 
-    .section-one-details-page-one, .section-one-details-page-three {
-        &__list {
-            margin-top: 120px;
-        }
-    } 
 
     .section-one-details-page-one,
     .section-one-details-page-two,
@@ -546,6 +517,12 @@ body {
         font-size: 3rem;
         }
     }
+
+    .section-one-details-page-one, .section-one-details-page-three {
+        &__list {
+            margin-top: 120px;
+        }
+    } 
 
     .section-one-details-page-two {
         &__list {
@@ -621,7 +598,7 @@ body {
     }
 
     .sections {
-         &__items {
+        &__items {
             width: 50%;
             height: 50px;
             font-size: 1.7rem;
@@ -635,28 +612,20 @@ body {
             }
         }
 
-        &__photos {
+        &__photos, &__contact {
             margin: 0 auto 4rem 40%;
             &--title-two {
-             font-weight: 100;
-            line-height: 45px;
+                font-weight: 100;
+                line-height: 45px;
             }
         }
         &__about {
             margin: 0 auto 4rem 15%;
             &--title-two {
-             font-weight: 100;
-            line-height: 45px;
+                font-weight: 100;
+                line-height: 45px;
             }
         }
-        &__contact {
-            margin: 0 auto 4rem 40%;
-            &--title-two {
-             font-weight: 100;
-            line-height: 45px;
-            }
-        }
-
     }
 
     .section-two-details {
@@ -694,7 +663,6 @@ body {
     }
 
     .main {
-
         &__data {
             padding: 180px 40px 40px 300px;
         }
@@ -704,13 +672,13 @@ body {
     }
 
     .sections {
-         &__items {
+        &__items {
             width: 65%;
             height: 120px;
             font-size: 3rem;
         }
 
-        &__programming {
+        &__programming, &__about {
             margin: 0 auto 4rem 0;
             &--title-two {
                 font-weight: 100;
@@ -718,25 +686,11 @@ body {
             }
         }
 
-        &__photos {
+        &__photos, &__contact {
             margin: 0 auto 4rem 20%;
             &--title-two {
-             font-weight: 100;
-            line-height: 120px;
-            }
-        }
-        &__about {
-            margin: 0 auto 4rem 0;
-            &--title-two {
-             font-weight: 100;
-            line-height: 120px;
-            }
-        }
-        &__contact {
-            margin: 0 auto 4rem 20%;
-            &--title-two {
-             font-weight: 100;
-            line-height: 120px;
+                font-weight: 100;
+                line-height: 120px;
             }
         }
     }
