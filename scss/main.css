@@ -541,6 +541,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.section-three-details-page-one__person-photo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .section-three-details-page-one__intro {
   margin: 2rem;
   font-size: 2.2rem;
