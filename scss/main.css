@@ -371,7 +371,7 @@ body {
 }
 
 .section-three-details {
-  padding: 1rem 2rem 2rem 0;
+  padding: 1rem 2rem 2rem 2rem;
 }
 
 .section-one-details-page-one,
@@ -543,6 +543,7 @@ body {
 }
 .section-three-details-page-one__person-photo {
   position: relative;
+  width: 250px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -565,10 +566,9 @@ body {
   color: rgb(177, 176, 176);
 }
 .section-three-details-page-one__text:nth-of-type(even) {
-  margin-left: 6rem;
+  margin-left: 2rem;
 }
 .section-three-details-page-one__text:nth-of-type(odd) {
-  margin-left: 2rem;
   margin-right: 2rem;
 }
 .section-three-details-page-one__text-four {

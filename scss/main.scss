@@ -225,7 +225,7 @@ body {
 }
 
 .section-three-details {
-    padding: 1rem 2rem 2rem 0;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 .section-one-details-page-one,
@@ -384,6 +384,7 @@ body {
 
     &__person-photo {
         position: relative;
+        width: 250px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -409,11 +410,11 @@ body {
     }
 
     &__text:nth-of-type(even) {
-        margin-left: 6rem;
+        margin-left: 2rem;
     }
 
     &__text:nth-of-type(odd) {
-        margin-left: 2rem;
+        // margin-left: 2rem;
             margin-right: 2rem;
     }
     &__text-four {
