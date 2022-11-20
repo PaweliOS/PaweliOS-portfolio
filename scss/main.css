@@ -435,8 +435,12 @@ body {
           animation: projectAppearing 2s linear 2s forwards;
 }
 
-.section-one-details-page-one__list, .section-one-details-page-three__list {
+.section-one-details-page-one__list {
   margin-top: 40px;
+}
+
+.section-one-details-page-three__list {
+  margin-top: 20px;
 }
 
 .section-one-details-page-two__list {

@@ -267,11 +267,18 @@ body {
     }
 }
 
-.section-one-details-page-one, .section-one-details-page-three {
+.section-one-details-page-one {
     &__list {
         margin-top: 40px;
     }
 }
+
+.section-one-details-page-three {
+    &__list {
+        margin-top: 20px;
+    }
+}
+
 .section-one-details-page-two {
     &__list {
         margin-top: 40px;
