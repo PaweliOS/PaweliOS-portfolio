@@ -405,6 +405,7 @@ body {
 .section-four-details-page-one__item {
   margin-left: -200%;
   margin-right: 200%;
+  margin-bottom: 4rem;
 }
 .section-one-details-page-one__item:nth-child(1),
 .section-one-details-page-two__item:nth-child(1),

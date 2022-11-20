@@ -271,6 +271,7 @@ const goNext = () => {
     pageN.textContent = pageNumber
 }
 
+
 const setListenerForMain = () => {
     mainsBtns.forEach((btn) => {
         btn.addEventListener('click', goMain)
