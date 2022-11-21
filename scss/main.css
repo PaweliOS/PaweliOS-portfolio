@@ -421,6 +421,13 @@ body {
   -webkit-animation: liMove 2s 0.5s ease-out forwards;
           animation: liMove 2s 0.5s ease-out forwards;
 }
+.section-one-details-page-one__item:nth-child(3),
+.section-one-details-page-two__item:nth-child(3),
+.section-one-details-page-three__item:nth-child(3),
+.section-four-details-page-one__item:nth-child(3) {
+  -webkit-animation: liMove 2s 1s ease-out forwards;
+          animation: liMove 2s 1s ease-out forwards;
+}
 .section-one-details-page-one .project-details,
 .section-one-details-page-two .project-details,
 .section-one-details-page-three .project-details,
@@ -657,7 +664,7 @@ body {
     font-size: 3rem;
   }
   .section-one-details-page-one__list, .section-one-details-page-three__list {
-    margin-top: 120px;
+    margin-top: 50px;
   }
   .section-one-details-page-two__list {
     margin-top: 50px;
