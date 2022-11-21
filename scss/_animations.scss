@@ -68,6 +68,19 @@
     }
 }
 
+@keyframes contentLi {
+    0% {
+        left: -200px;
+    }
+
+    80% {
+        left: -200px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
 @keyframes projectAppearing {
     from {
         opacity: 0;

@@ -25,6 +25,10 @@
     letter-spacing: 2px;
 }
 
+@mixin sectionOnePageThreeNumberChange {
+    position: absolute;
+    left: -60px;
+}
 
 
 *, 
@@ -278,8 +282,34 @@ body {
 
 .section-one-details-page-three {
     &__list {
-        // color: rebeccapurple;
         margin-top: 20px;
+        list-style-type: none;
+    }
+
+    &__item::first-letter {
+        text-transform: uppercase;
+    }
+
+    &__item:nth-child(1)::before {
+        content: '4.';
+        @include sectionOnePageThreeNumberChange();
+        animation: liMove 2s ease-out forwards;
+        animation: contentLi 2s ease-out forwards;
+        
+    }
+
+    &__item:nth-child(2)::before {
+        content: '5.';
+        @include sectionOnePageThreeNumberChange();
+        animation: liMove 2s .5s ease-out forwards;
+        animation: contentLi 2s .5s ease-out forwards;
+    }
+
+    &__item:nth-child(3)::before {
+        content: '6.';
+        @include sectionOnePageThreeNumberChange();
+        animation: liMove 2s 1s ease-out forwards;
+        animation: contentLi 2s 1s ease-out forwards;
     }
 }
 
