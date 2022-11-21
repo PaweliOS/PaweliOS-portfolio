@@ -170,14 +170,13 @@ const goBack = () => {
         pageOne.classList.remove('inactive')
         pageNumber -= 1
         pageN.textContent = pageNumber
-        backBtn.classList.add('inactive')
+        // backBtn.classList.add('inactive')
     }
 
     if ((sectionNumber == 1) && (pageNumber == 3)) {
         console.log('SPR 1 3: Next -> '+sectionNumber+', page: '+pageNumber)
         pageThree.classList.add('inactive')
         pageTwo.classList.remove('inactive')
-        
         pageNumber-=1
         pageN.textContent = pageNumber
     }
