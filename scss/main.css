@@ -452,9 +452,20 @@ body {
 
 .section-one-details-page-two__list {
   margin-top: 40px;
+  list-style-type: none;
 }
 .section-one-details-page-two p {
   font-size: 1.9rem;
+}
+.section-one-details-page-two__item::first-letter {
+  text-transform: uppercase;
+}
+.section-one-details-page-two__item:before {
+  position: absolute;
+  content: "3.";
+  left: -20px;
+  -webkit-animation: liMove 2s ease-out forwards;
+          animation: liMove 2s ease-out forwards;
 }
 
 .section-two-details {

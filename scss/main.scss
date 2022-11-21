@@ -286,9 +286,21 @@ body {
 .section-one-details-page-two {
     &__list {
         margin-top: 40px;
+        list-style-type: none;
     }
     p {
         font-size: 1.9rem;
+    }
+
+    &__item::first-letter {
+        text-transform: uppercase;
+    }
+
+    &__item:before {
+        position: absolute;
+        content: '3.';
+        left: -20px;
+        animation: liMove 2s ease-out forwards;
     }
 }
 
