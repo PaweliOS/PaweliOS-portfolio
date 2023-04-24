@@ -50,6 +50,15 @@ body {
     height: 100vh;
 }
 
+.simple-underline {
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
 .underline {
     position: relative;
     height: 1px;
@@ -235,6 +244,7 @@ body {
 .section-one-details-page-one,
 .section-one-details-page-two,
 .section-one-details-page-three,
+.section-one-details-page-four,
 .section-four-details-page-one  {
     position: relative;
     width: 100%;
@@ -478,6 +488,10 @@ body {
     &__text-five {
         margin-left: 0;
         margin-top: 2rem;
+    }
+
+    &__list {
+        list-style-type: none;
     }
 }
 

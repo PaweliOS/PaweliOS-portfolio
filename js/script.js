@@ -17,6 +17,9 @@ const sectionOneDetails = document.querySelector('.section-one-details')
 const pageOne = document.querySelector('.section-one-details-page-one')
 const pageTwo = document.querySelector('.section-one-details-page-two')
 const pageThree = document.querySelector('.section-one-details-page-three')
+const pageFour = document.querySelector('.section-one-details-page-four')
+
+
 
 const sectionTwo = document.querySelector('.section-two')
 const sectionTwoDetails = document.querySelector('.section-two-details')
@@ -179,6 +182,17 @@ const goBack = () => {
         pageTwo.classList.remove('inactive')
         pageNumber-=1
         pageN.textContent = pageNumber
+       
+
+    }
+
+    if ((sectionNumber == 1) && (pageNumber == 4)) {
+        console.log('SPR 1 3: Next -> '+sectionNumber+', page: '+pageNumber)
+        pageThree.classList.remove('inactive')
+        pageFour.classList.add('inactive')
+        
+        pageNumber-=1
+        pageN.textContent = pageNumber
     }
 }
 
@@ -252,11 +266,29 @@ const goNext = () => {
     if ((sectionNumber == 1) && (pageNumber == 1)) {
         pageOne.classList.add('inactive')
         pageTwo.classList.remove('inactive') 
+        pageFour.classList.add('inactive') 
+       
     }
 
     if ((sectionNumber == 1) && (pageNumber == 2)) {
         pageTwo.classList.add('inactive')
         pageThree.classList.remove('inactive') 
+        pageFour.classList.add('inactive')
+       
+        // nextBtn.classList.add('inactive')
+    }
+    if ((sectionNumber == 1) && (pageNumber == 3)) {
+        pageTwo.classList.add('inactive')
+        pageThree.classList.add('inactive') 
+        pageFour.classList.remove('inactive')
+        
+        nextBtn.classList.add('inactive')
+    }
+    if ((sectionNumber == 1) && (pageNumber == 4)) {
+        pageTwo.classList.add('inactive')
+        pageThree.classList.add('inactive') 
+        pageFour.classList.add('inactive')
+        
         nextBtn.classList.add('inactive')
     }
 
